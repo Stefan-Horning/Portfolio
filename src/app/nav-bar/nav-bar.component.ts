@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MenuMobileComponent } from '../menu-mobile/menu-mobile.component';
 
 @Component({
@@ -8,15 +8,12 @@ import { MenuMobileComponent } from '../menu-mobile/menu-mobile.component';
 })
 export class NavBarComponent {
   isMenuOpen: boolean = false;
-  constructor(private mobileMenu: MenuMobileComponent){}
 
   checkMenuMobile(){
     if(!this.isMenuOpen){
       this.isMenuOpen = true;
-      this.mobileMenu.open = true;
     }else{
       this.isMenuOpen = false;
-      this.mobileMenu.open = false;
     }
   }
 }
