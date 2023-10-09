@@ -1,4 +1,4 @@
-<div [ngClass]="{'mobile-menu-open' : open == true}" class="mobile-menu">
+<div *ngIf="open" class="mobile-menu">
     <div class="menu-container">
         <div>
             <a href="#">About me</a>
