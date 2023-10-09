@@ -1,8 +1,7 @@
+
+
 .main-container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     z-index: 99 !important;
     background-color: rgb(20, 29, 47);
     display: flex;
@@ -12,6 +11,7 @@
     max-height: 40px;
     min-height: 40px;
 }
+
 
 .name-container{
     font-family: 'Lexend';
@@ -41,6 +41,10 @@
     background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+}
+
+.image-container {
+    cursor: pointer;
 }
 
 .burger-menu{

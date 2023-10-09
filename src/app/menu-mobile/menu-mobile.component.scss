@@ -1,6 +1,7 @@
 .mobile-menu{
     overflow: hidden;
     position: absolute;
+    z-index: 0 !important;
     top: 0;
     transition: all 225ms ease-in-out;
     height: 100vh;

@@ -1,10 +1,17 @@
+<app-menu-mobile *ngIf="isMenuOpen == true"></app-menu-mobile>
+
 <div class="main-container">
     <div class="name-container">
         <span class="name">Ste</span><p class="dot-color">f</p><span class="name">a</span><p class="half-color">n</p>
     </div>
     <div>
-        <img (click)="checkMenuMobile()" class="burger-menu" src="./assets/img/burger-menu.svg" alt="">
+        <img *ngIf="!isMenuOpen" (click)="checkMenuMobile()" class="burger-menu" src="./assets/img/burger-menu.svg" alt="">
+        <div *ngIf="isMenuOpen" class="image-container">
+            <img src="./assets/img/burger-menuA1.svg" *ngIf="activeImageIndex === 0  !endpicture" />
+            <img src="./assets/img/burger-menuA2.svg" *ngIf="activeImageIndex === 1  !endpicture" />
+            <img src="./assets/img/burger-menuA3.svg" *ngIf="activeImageIndex === 2  !endpicture" />
+            <img (click)="checkMenuMobile()" *ngIf="endpicture" src="./assets/img/burger-menuA3.svg" alt="">
+        </div>
     </div>
 </div>
 
-<app-menu-mobile *ngIf="isMenuOpen == true"></app-menu-mobile>

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomescreenComponent } from './homescreen/homescreen.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
+import { FirstScreenComponent } from './first-screen/first-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomescreenComponent,
     NavBarComponent,
-    MenuMobileComponent
+    MenuMobileComponent,
+    FirstScreenComponent
   ],
   imports: [
     BrowserModule,
