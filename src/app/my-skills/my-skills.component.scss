@@ -1,4 +1,5 @@
 .my-skills-container{
+    position: relative;
     margin: 0;
     background-color: rgb(20, 29, 47);
     width: 100%;
@@ -37,5 +38,118 @@
         text-align: end;
         color: white;
         margin-right: calc(10px + 20px);
+    }
+}
+
+.skills-list{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div{
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100px;
+        width: 90px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    img{
+        width: 45px;
+        height: 45px;
+    }
+
+    span{
+        height: 26px;
+        text-align: center;
+        color: white;
+        max-width: 100%;
+        gap: 10px;
+    }
+}
+
+.talk-container{
+    margin-top: 50px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    a{
+        z-index: 10;
+        margin-top: -20px;
+        padding: 15px 30px 15px 30px;
+        text-decoration: none;
+        background-color: #70E61C;
+        border-radius: 10px;
+        color: white;
+        gap: 10px;
+        transition: all 125ms ease-in-out;
+
+        &:hover{
+            scale: 1.2;
+            background-color: #9747FF;
+        }
+    }
+}
+
+
+
+.headline-portfolio{
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    span{
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 45px;
+        font-weight: 700;
+        color: white;
+    }
+}
+
+.short-line{
+    width: 20px;
+    height: 3px;
+    background-color: #9747FF;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.long-line{
+    width: 75px;
+    height: 3px;
+    background-color: #9747FF;
+}
+
+.backgraound-effect{
+    rotate: -90deg;
+    height: fit-content;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: -50%;
+}
+
+.Portfolio-span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    span{
+        font-size: 16px;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }

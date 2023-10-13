@@ -40,7 +40,14 @@ h1{
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 
+    a{
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 30px;
+        width: 30px;
+    }
     img{
         margin-left: 10px;
         margin-right: 10px;
