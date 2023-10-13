@@ -1,0 +1,85 @@
+.portfolio-container{
+    width: 100%;
+    font-family: 'Poppins';
+    background-color: rgb(20, 29, 47);
+}
+
+.projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    img{
+        width: 80%;
+        height: 80%;
+    }
+}
+
+.name{
+    margin-top: -20px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #9747FF;
+}
+
+.programming{
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: 400;
+    color: #70E61C;
+}
+
+.description{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.buttons{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    a{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.live{
+    padding: 15px 30px 15px 30px;
+    text-decoration: none;
+    background-color: #9747FF;
+    border-radius: 10px;
+    color: white;
+    gap: 10px;
+    transition: all 125ms ease-in-out;
+    border: 2px solid #9747FF;
+
+    &:hover{
+        background-color: #70E61C;
+        border: 2px solid #70E61C;
+    }
+}
+
+.code{
+    padding: 15px 30px 15px 30px;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 10px;
+    color: white;
+    gap: 10px;
+    transition: all 125ms ease-in-out;
+    border: 2px solid #70E61C;
+
+    &:hover{
+        background-color: #70E61C;
+    }
+}
