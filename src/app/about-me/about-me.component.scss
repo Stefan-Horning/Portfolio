@@ -4,7 +4,7 @@
     position: relative;
     background-color: rgb(20, 29, 47);
     overflow-x: hidden;
-    height: 1000px;
+    padding-bottom: 100px;
 }
 
 .backgraound-effect{
@@ -67,12 +67,31 @@ h1{
     color: white;
     margin-left: 20px;
     margin-right: 20px;
+
     span{
         font-size: 16px;
-
-        font-weight: 400;
         width: 100%;
+        font-weight: 400;
+
         text-align: start;
         
     }
+}
+
+.personal-think{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+
+    img{
+        scale: 0.9;
+
+        &:hover{
+            scale: 1;
+        }
+    }
+}
+
+.personal-span{
+    width: 75%;
 }
