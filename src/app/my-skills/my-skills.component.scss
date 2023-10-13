@@ -1,0 +1,41 @@
+.my-skills-container{
+    margin: 0;
+    background-color: rgb(20, 29, 47);
+    width: 100%;
+    font-family: 'Poppins';
+}
+
+.headline{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+
+    h1{
+        font-size: 45px;
+        font-weight: 700;
+        color: white;
+        margin-right: 10px;
+    }
+
+    .line{
+        width: 20px;
+        height: 3px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: #9747FF;
+    }
+}
+
+.explain-skill{
+    display: flex;
+    justify-content: flex-end;
+
+    span{
+        font-size: 16px;
+        font-weight: 400;
+        text-align: end;
+        color: white;
+        margin-right: calc(10px + 20px);
+    }
+}
