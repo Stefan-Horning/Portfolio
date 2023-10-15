@@ -1,0 +1,130 @@
+.contact-container{
+    overflow-x: hidden;
+    background-color: rgb(20, 29, 47);
+    width: 100%;
+    font-family: 'Poppins';
+    padding-top: 50px;
+}
+
+.headline{
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1{
+        color: white;
+        font-size: 45px;
+        font-weight: 700;
+        margin-left: 5px;
+    }
+}
+
+.line{
+    overflow-x: hidden;
+    background-color: #9747FF;
+    width: 20px;
+    height: 3px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.sub-headline{
+    margin-left: 25px;
+    span{
+        color: white;
+        font-size: 23px;
+        font-weight: 700;
+    }
+}
+
+.text{
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    span{
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+.slogen{
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    span{
+        color: white;
+        font-size: 13px;
+        font-weight: 400;
+        margin-right: 2px;
+    }
+
+    p{
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+.Contact{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    input{
+        gap: 10px;
+        padding: 15px 25px 15px 25px;
+        border-radius: 10px;
+        border: 1px solid #9747FF;
+        background-color: transparent;
+        color: white;
+        font-size: 14px;
+        margin-bottom: 10px;
+        
+        &::placeholder{
+            color: white;
+        }
+
+        &:focus-visible{
+            box-shadow: none;
+            border: 1px solid #70E61C;
+            outline:#70E61C;
+        }
+    }
+
+    textarea{
+        gap: 10px;
+        height: 150px;
+        padding: 15px 25px 15px 25px;
+        border-radius: 10px;
+        border: 1px solid #9747FF;
+        background-color: transparent;
+        color: white;
+        font-size: 14px;
+        margin-bottom: 10px;
+        font-family: 'Poppins';
+        max-width: 100%;
+        resize: none;
+    
+        &::placeholder{
+            color: white;
+        }
+    
+        &:focus-visible{
+            box-shadow: none;
+            border: 1px solid #70E61C;
+            outline:#70E61C;
+        }
+    }
+}
+
+
+
