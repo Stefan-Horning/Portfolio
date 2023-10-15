@@ -1,4 +1,6 @@
 .portfolio-container{
+    overflow-x: hidden;
+    position: relative;
     width: 100%;
     font-family: 'Poppins';
     background-color: rgb(20, 29, 47);
@@ -18,6 +20,7 @@
 }
 
 .name{
+    z-index: 10;
     margin-top: -20px;
     font-size: 32px;
     font-weight: 700;
@@ -25,6 +28,7 @@
 }
 
 .programming{
+    z-index: 10;
     margin-top: 20px;
     font-size: 23px;
     font-weight: 400;
@@ -32,6 +36,7 @@
 }
 
 .description{
+    z-index: 10;
     margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
@@ -42,6 +47,7 @@
 }
 
 .buttons{
+    z-index: 10;
     margin-top: 30px;
     width: 100%;
     display: flex;
@@ -82,4 +88,22 @@
     &:hover{
         background-color: #70E61C;
     }
+}
+
+.background-effect{
+    position: absolute;
+    top: -100px;
+    right: 0;
+    width: 100%;
+    height: fit-content;
+    z-index: 1;
+}
+
+.background-end{
+    rotate: 90deg;
+    position: absolute;
+    bottom: 10%;
+    right: -50%;
+    width: 100%;
+    height: fit-content;
 }
