@@ -1,0 +1,82 @@
+.footer{
+    font-family: 'Poppins';
+    z-index: 20;
+    border-top: 4px solid #70E61C;
+    background-color: rgb(20, 29, 47);
+}
+
+.name-container{
+    margin-top: 30px;
+    font-family: 'Lexend';
+    display: flex;
+    justify-content: center;
+}
+
+.name{
+    font-size: 56px;
+    color: white;
+}
+
+.dot-color{
+    margin: 0;
+    font-size: 56px;
+    color: white;
+    background: linear-gradient(to top, white 30%,  rgb(152, 71, 255) 70%);
+    background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.half-color{
+    margin: 0;
+    font-size: 56px;
+
+    background: linear-gradient(to right, white 50%, #98fe00 50%);
+    background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.copyright{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    span{
+        color: white;
+        font-size: 22px;
+    }
+}
+
+.sozial-media{
+    transition: 155ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    img{
+        cursor: pointer;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        &:hover{
+            scale: 1.1;
+        }
+    }
+}
+
+.Impressum{
+    transition: 155ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    a{
+        color: white;
+        text-decoration: none;
+
+        &:hover{
+            scale: 1.1;
+        }
+    }
+
+
+}
