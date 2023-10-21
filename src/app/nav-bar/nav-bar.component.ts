@@ -19,9 +19,11 @@ export class NavBarComponent {
     if(!this.isMenuOpen){
       this.startImageAnimation();
       this.isMenuOpen = true;
+      document.documentElement.style.overflow = 'hidden'
     }else{
       this.isMenuOpen = false;
       this.endpicture = false;
+      document.documentElement.style.overflow = 'scroll'
     }
   }
 

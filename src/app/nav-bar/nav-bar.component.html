@@ -5,7 +5,7 @@
         <span class="name">Ste</span><p class="dot-color">f</p><span class="name">a</span><p class="half-color">n</p>
     </div>
     <div>
-        <img *ngIf="!isMenuOpen" (click)="checkMenuMobile()" class="burger-menu" src="./assets/img/burger-menu.svg" alt="">
+        <a href="#top-side"><img *ngIf="!isMenuOpen" (click)="checkMenuMobile()" class="burger-menu" src="./assets/img/burger-menu.svg" alt=""></a>
         <div *ngIf="isMenuOpen" class="image-container">
             <img src="./assets/img/burger-menuA1.svg" *ngIf="activeImageIndex === 0  !endpicture" />
             <img src="./assets/img/burger-menuA2.svg" *ngIf="activeImageIndex === 1  !endpicture" />
