@@ -3,6 +3,7 @@ import { MenuMobileComponent } from '../menu-mobile/menu-mobile.component';
 import { trigger, transition, animate, style } from '@angular/animations';
 import { HomescreenComponent } from '../homescreen/homescreen.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-nav-bar',
@@ -44,4 +45,5 @@ export class NavBarComponent {
     clearInterval(this.imageAnimationInterval);
     this.endpicture = true;
   }
+  
 }
