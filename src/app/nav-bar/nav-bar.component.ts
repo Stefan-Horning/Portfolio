@@ -1,6 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, } from '@angular/core';
 import { MenuMobileComponent } from '../menu-mobile/menu-mobile.component';
 import { trigger, transition, animate, style } from '@angular/animations';
+import { HomescreenComponent } from '../homescreen/homescreen.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @Component({
   selector: 'app-nav-bar',

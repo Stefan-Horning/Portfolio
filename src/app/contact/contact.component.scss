@@ -222,3 +222,19 @@
     left: -12%;
     height: 250px;
 }
+
+.top{
+    overflow-x: hidden;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    img{
+        margin-right: 10px;
+
+        &:hover{
+            cursor: pointer;
+            content: url('../../assets/img/top-g.svg');
+        }
+    }
+}
