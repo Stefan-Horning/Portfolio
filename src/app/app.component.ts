@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-//import * as AOS from 'aos';
+import * as AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,9 @@ export class AppComponent implements OnInit{
   title = 'Portfolio';
 
   ngOnInit(): void {
-    /*AOS.init({
+    AOS.init({
       duration: 1000,
       once: false,
-    });*/
+    });
   }
 }
