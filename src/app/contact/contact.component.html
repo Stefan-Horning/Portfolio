@@ -21,15 +21,15 @@
         <div class="Contact">
             <div>
                 <input required minlength="2" placeholder="Your name" type="text" #nameField>
-                <img src="../../assets/img/false.svg" alt="" *ngIf="!nameField.validity.valueMissing">
+                <img src="../../assets/img/false.svg" alt="">
             </div>
             <div>
                 <input required placeholder="Your email" type="email" #emailField>
-                <img src="../../assets/img/false.svg" alt="" *ngIf="!emailField.validity.valueMissing">
+                <img src="../../assets/img/false.svg" alt="">
             </div>
             <div>   
                 <textarea minlength="3" required #massageField placeholder="Your massage"></textarea>
-                <img src="../../assets/img/false.svg" alt="" *ngIf="!massageField.validity.valueMissing">
+                <img src="../../assets/img/false.svg" alt="">
             </div>
         </div>
         <div class="policy">

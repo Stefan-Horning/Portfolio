@@ -20,9 +20,6 @@ export class ContactComponent {
 
 
   async sendMail(){
-    if (this.myForm && this.myForm.invalid) {
-      this.showImages = true;
-    }else{
       this.setVariable();
       this.setVariableTrue();
 
@@ -39,8 +36,8 @@ export class ContactComponent {
       )
 
       this.setVariableFalse()
-    }
-  }
+    
+}
 
   setVariable(){
     this.name = this.myName.nativeElement;
