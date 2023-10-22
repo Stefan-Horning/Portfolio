@@ -19,13 +19,22 @@
     </div>
     <form (submit)="sendMail()" ngNativeValidate #myForm >
         <div class="Contact">
-            <input required minlength="2" placeholder="Your name" type="text" #nameField>
-            <input required placeholder="Your email" type="email" #emailField>
-            <textarea minlength="3" required #massageField placeholder="Your massage"></textarea>
+            <div>
+                <input required minlength="2" placeholder="Your name" type="text" #nameField>
+                <img src="../../assets/img/false.svg" alt="" *ngIf="!nameField.validity.valueMissing">
+            </div>
+            <div>
+                <input required placeholder="Your email" type="email" #emailField>
+                <img src="../../assets/img/false.svg" alt="" *ngIf="!emailField.validity.valueMissing">
+            </div>
+            <div>   
+                <textarea minlength="3" required #massageField placeholder="Your massage"></textarea>
+                <img src="../../assets/img/false.svg" alt="" *ngIf="!massageField.validity.valueMissing">
+            </div>
         </div>
         <div class="policy">
             <div class="checkbox">
-                <label for="AGB"><input id="AGB" type="checkbox"></label>
+                <label for="AGB"><input required id="AGB" type="checkbox"></label>
             </div>
             <div>
                 <span>I've read the</span>

@@ -5,6 +5,7 @@ import { Component, ViewChild } from '@angular/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
+
 export class ContactComponent {
   @ViewChild('myForm') myForm:any;
   @ViewChild('nameField') myName:any;
@@ -15,26 +16,30 @@ export class ContactComponent {
   email:any;
   massage:any;
   button:any;
+  showImages:boolean = true;
 
 
   async sendMail(){
-    this.setVariable();
-    console.log('mail', this.myForm);
-    this.setVariableTrue();
+    if (this.myForm && this.myForm.invalid) {
+      this.showImages = true;
+    }else{
+      this.setVariable();
+      this.setVariableTrue();
 
-    let fd = new FormData();
-    fd.append('name',this.name.value);
-    fd.append('email',this.email.value);
-    fd.append('massage',this.massage.value);
-    //senden
-    await fetch('https://formspree.io/f/mqkvneej',
-      {
-        method: 'POST',
-        body: fd,
-      }
-    )
+      let fd = new FormData();
+      fd.append('name',this.name.value);
+      fd.append('email',this.email.value);
+      fd.append('massage',this.massage.value);
+      //senden
+      await fetch('https://formspree.io/f/mqkvneej',
+        {
+          method: 'POST',
+          body: fd,
+        }
+      )
 
-    this.setVariableFalse()
+      this.setVariableFalse()
+    }
   }
 
   setVariable(){
