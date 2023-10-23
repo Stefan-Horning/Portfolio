@@ -47,3 +47,47 @@
 .burger-menu{
     cursor: pointer;
 }
+
+button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    --webkit-appearance: none;
+    border: none;
+    outline: none;
+    stroke: white;
+    cursor: pointer;
+    transition: all 175ms ease-in-out;
+    
+    &:hover {
+      stroke: lighten(#ef5435, 30%);
+    }
+  }
+  svg { 
+    width: 100px;
+  }
+  
+  #burger-bar-one {
+    opacity: 1;
+    stroke-dasharray: 412px 1500px;
+  }
+  #burger-bar-two {
+    opacity: 1;
+    stroke-dasharray: 412px 1500px;
+  }
+  #burger-bar-three {
+    opacity: 1;
+  }
+  
+  .path {
+    fill: transparent;
+    stroke-width: 67px;
+    stroke: #000000;
+    stroke-linecap: round;
+    opacity: 0;
+    stroke: inherit;
+  }
+  
+//<a href="#top-side"><img *ngIf="!isMenuOpen" (click)="checkMenuMobile()" class="burger-menu" src="./assets/img/burger-menu.svg" alt=""></a>

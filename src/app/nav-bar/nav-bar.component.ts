@@ -41,9 +41,29 @@ export class NavBarComponent {
     }, 100); // Ändern Sie die Zeitintervalle nach Bedarf
   }
 
+  
   stopImageAnimation(){
     clearInterval(this.imageAnimationInterval);
     this.endpicture = true;
   }
   
+  toggled = false;
+
+  barOne = document.getElementById('burger-bar-one');
+  barTwo = document.getElementById('burger-bar-two');
+  barThree = document.getElementById('burger-bar-three');
+
+  /*onToggle(){
+    if (!this.toggled) {
+      toggled = !toggled;
+      TweenLite.to(barOne, .5, { strokeDashoffset:-1076} );
+      TweenLite.to(barTwo, .5, { strokeDashoffset:-1250} );
+      TweenLite.to(barThree, .5, { opacity: 0, x: -1000 });
+    } else {
+      toggled = !toggled;
+      TweenLite.to(barOne, .5, { strokeDashoffset:0} );
+      TweenLite.to(barTwo, .5, { strokeDashoffset:0} );
+      TweenLite.to(barThree, .5, { opacity: 1, x: 0 });
+    }
+  }*/
 }

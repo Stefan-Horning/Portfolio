@@ -5,7 +5,19 @@
         <span class="name">Ste</span><p class="dot-color">f</p><span class="name">a</span><p class="half-color">n</p>
     </div>
     <div>
-        <a href="#top-side"><img *ngIf="!isMenuOpen" (click)="checkMenuMobile()" class="burger-menu" src="./assets/img/burger-menu.svg" alt=""></a>
+        <a href="#top-side"><button >
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 512 512" style="overflow: visible; enable-background:new 0 0 512 512;" xml:space="preserve">
+            <g>
+              <path id="burger-bar-one" class="path-1 path" d="M50,116.7l404.2-0.2c0,0,84,12.4,140,10.4s97-96,86-127s-83.3-93.3-142,0s-84,116.6-84,116.6L50,391.3"/>
+            </g>
+            <g>
+              <path id="burger-bar-two" class="path" d="M462,391.1l-412,0.2c0,0-98.6,15.7-98.8,71.7c-0.2,36,93,90,147,96c32.7,3.6,247.4,0.9,343-54
+                C521.1,459,462,391.1,462,391.1L50,116.7"/>
+            </g>
+            <line id="burger-bar-three" class="path" x1="50" y1="256" x2="462" y2="256"/>
+            </svg>
+          </button></a>
         <div *ngIf="isMenuOpen" class="image-container">
             <img src="./assets/img/burger-menuA1.svg" *ngIf="activeImageIndex === 0  !endpicture" />
             <img src="./assets/img/burger-menuA2.svg" *ngIf="activeImageIndex === 1  !endpicture" />
