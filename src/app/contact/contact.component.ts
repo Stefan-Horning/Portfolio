@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -16,7 +17,15 @@ export class ContactComponent {
   email:any;
   massage:any;
   button:any;
+  checkbox:any;
   showImages:boolean = true;
+  buttonInput:boolean = true;
+  contactForm = new FormGroup({
+    nameInput: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    emailInput: new FormControl('', [Validators.required, Validators.email]),
+    massageInput: new FormControl('', [Validators.required, Validators.minLength(10)]),
+    checkboxInput: new FormControl(false)
+  });
 
 
   async sendMail(){
@@ -34,7 +43,6 @@ export class ContactComponent {
           body: fd,
         }
       )
-
       this.setVariableFalse()
     
 }
@@ -44,6 +52,7 @@ export class ContactComponent {
     this.email = this.myEmail.nativeElement;
     this.massage = this.myMassage.nativeElement;
     this.button = this.buttonField.nativeElement;
+    this.checkbox = document.querySelector('#AGB');
   }
 
   setVariableTrue(){
@@ -54,9 +63,12 @@ export class ContactComponent {
   }
 
   setVariableFalse(){
-    this.name.disabled = false;
-    this.email.disabled = false;
-    this.massage.disabled = false;
-    this.button.disabled = false;
+    setTimeout(() =>{
+      this.checkbox.checked = false;
+      this.name.disabled = false;
+      this.email.disabled = false;
+      this.massage.disabled = false;
+    },500)
+    
   }
 }

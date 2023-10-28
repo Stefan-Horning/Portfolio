@@ -17,24 +17,24 @@
         <span>Need a Frontend developer?</span>
         <p>Contact me!</p>
     </div>
-    <form (submit)="sendMail()" ngNativeValidate #myForm >
+    <form (submit)="sendMail()" ngNativeValidate #myForm  [formGroup]="contactForm">
         <div class="Contact">
             <div>
-                <input required minlength="2" placeholder="Your name" type="text" #nameField>
-                <img src="../../assets/img/false.svg" alt="">
+                <input formControlName="nameInput" required minlength="2" placeholder="Your name" type="text" #nameField name="name">
+                <img *ngIf="contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)" src="../../assets/img/false.svg" alt="">
             </div>
             <div>
-                <input required placeholder="Your email" type="email" #emailField>
-                <img src="../../assets/img/false.svg" alt="">
+                <input formControlName="emailInput" required placeholder="Your email" type="email" #emailField name="email">
+                <img *ngIf="contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched)" src="../../assets/img/false.svg" alt="">
             </div>
             <div>   
-                <textarea minlength="3" required #massageField placeholder="Your massage"></textarea>
-                <img src="../../assets/img/false.svg" alt="">
+                <textarea formControlName="massageInput" minlength="10" required #massageField placeholder="Your massage" name="massage"></textarea>
+                <img *ngIf="contactForm.controls['massageInput'].invalid && (contactForm.controls['massageInput'].dirty || contactForm.controls['massageInput'].touched)" src="../../assets/img/false.svg" alt="">
             </div>
         </div>
         <div class="policy">
             <div class="checkbox">
-                <label for="AGB"><input required id="AGB" type="checkbox"></label>
+                <label for="AGB"><input formControlName="checkboxInput" name="checkbox" required id="AGB" type="checkbox"></label>
             </div>
             <div>
                 <span>I've read the</span>
@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="submit-button">
-            <button #buttonField>Send message :)</button>
+            <button [disabled]="!contactForm.valid" #buttonField>Send message :)</button>
         </div>
     </form>
     <div class="top">
