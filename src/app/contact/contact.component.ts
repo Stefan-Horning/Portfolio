@@ -37,7 +37,7 @@ export class ContactComponent {
       fd.append('email',this.email.value);
       fd.append('massage',this.massage.value);
       //senden
-      await fetch('https://formspree.io/f/mqkvneej',
+      await fetch('https://formspree.io/f/mdorbjdk',
         {
           method: 'POST',
           body: fd,
@@ -63,12 +63,10 @@ export class ContactComponent {
   }
 
   setVariableFalse(){
-    setTimeout(() =>{
       this.checkbox.checked = false;
       this.name.disabled = false;
       this.email.disabled = false;
       this.massage.disabled = false;
-    },500)
     
   }
 }
