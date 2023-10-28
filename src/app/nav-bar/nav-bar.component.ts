@@ -1,9 +1,9 @@
 import { Component, Input, } from '@angular/core';
-import { MenuMobileComponent } from '../menu-mobile/menu-mobile.component';
 import { trigger, transition, animate, style } from '@angular/animations';
 import { HomescreenComponent } from '../homescreen/homescreen.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
+import gsap from 'gsap';
 
 @Component({
   selector: 'app-nav-bar',
@@ -20,11 +20,9 @@ export class NavBarComponent {
     if(!this.isMenuOpen){
       this.startImageAnimation();
       this.isMenuOpen = true;
-      document.documentElement.style.overflow = 'hidden'
     }else{
       this.isMenuOpen = false;
       this.endpicture = false;
-      document.documentElement.style.overflow = 'scroll'
     }
   }
 
@@ -49,21 +47,24 @@ export class NavBarComponent {
   
   toggled = false;
 
-  barOne = document.getElementById('burger-bar-one');
-  barTwo = document.getElementById('burger-bar-two');
-  barThree = document.getElementById('burger-bar-three');
+  onToggle() {
+    let barOne = document.getElementById('burger-bar-one');
+    let barTwo = document.getElementById('burger-bar-two');
+    let barThree = document.getElementById('burger-bar-three');
 
-  /*onToggle(){
     if (!this.toggled) {
-      toggled = !toggled;
-      TweenLite.to(barOne, .5, { strokeDashoffset:-1076} );
-      TweenLite.to(barTwo, .5, { strokeDashoffset:-1250} );
-      TweenLite.to(barThree, .5, { opacity: 0, x: -1000 });
+      this.checkMenuMobile()
+      this.toggled = !this.toggled;
+      gsap.to(barOne, 0.5, { strokeDashoffset: -1076 });
+      gsap.to(barTwo, 0.5, { strokeDashoffset: -1250 });
+      gsap.to(barThree, 0.5, { opacity: 0, x: -1000 });
     } else {
-      toggled = !toggled;
-      TweenLite.to(barOne, .5, { strokeDashoffset:0} );
-      TweenLite.to(barTwo, .5, { strokeDashoffset:0} );
-      TweenLite.to(barThree, .5, { opacity: 1, x: 0 });
+      this.toggled = !this.toggled;
+      this.checkMenuMobile()
+      gsap.to(barOne, 0.5, { strokeDashoffset: 0 });
+      gsap.to(barTwo, 0.5, { strokeDashoffset: 0 });
+      gsap.to(barThree, 0.5, { opacity: 1, x: 0 });
     }
-  }*/
+  }
+
 }

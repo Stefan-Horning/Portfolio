@@ -50,8 +50,8 @@
 
 button {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    //top: 50%;
+    right: -20px;
     transform: translate(-50%, -50%);
     background-color: transparent;
     --webkit-appearance: none;
@@ -60,13 +60,15 @@ button {
     stroke: white;
     cursor: pointer;
     transition: all 175ms ease-in-out;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &:hover {
-      stroke: lighten(#ef5435, 30%);
+      stroke: lighten(#98fe00, 10%);
     }
   }
   svg { 
-    width: 100px;
+    width: 50px;
   }
   
   #burger-bar-one {
@@ -89,5 +91,71 @@ button {
     opacity: 0;
     stroke: inherit;
   }
-  
-//<a href="#top-side"><img *ngIf="!isMenuOpen" (click)="checkMenuMobile()" class="burger-menu" src="./assets/img/burger-menu.svg" alt=""></a>
+
+
+
+
+
+
+  .mobile-menu{
+    position: absolute;
+    z-index: 99 !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(20, 29, 47,0.95);
+    font-family: 'Poppins';
+    p{
+        margin: 0;
+    }
+}
+
+.menu-container{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    height: 100%;
+
+    div{
+        margin-top: -40px;
+    }
+
+    a{
+        position: relative;
+        padding: 16px;
+        color: white;
+        text-decoration: none;
+        transition: all 250ms ease-in-out;
+        font-size: 32px;
+        display: flex;
+
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 10px;
+            right: 100%;
+            height: 2px; // Dicke der Unterstreichung
+            background-color: #9747FF; // Farbe der Unterstreichung
+            transition: right 0.3s ease; // Geschwindigkeit und Art der Transition anpassen
+        }
+
+          &:hover {
+            color: #70E61C;
+            &:before {
+              right: 10px; // Ändern Sie die Breite nach Bedarf (0 bedeutet von links nach rechts)
+            }
+        }
+    }
+}
+
+.sticky{
+  z-index: 99;
+  position: sticky;
+  top: 0;
+}
