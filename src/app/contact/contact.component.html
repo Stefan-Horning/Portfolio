@@ -25,7 +25,7 @@
                 <span *ngIf=" contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)">Your name is required</span>
             </div>
             <div>
-                <input [ngClass]="{'redBorder': contactForm.controls['emailInput'].hasError('pattern')}" (ngModelChange)="setBorderColor()" formControlName="emailInput" required placeholder="Your email" type="email" #emailField name="email">
+                <input [ngClass]="{'redBorder': contactForm.controls['emailInput'].hasError('pattern'), 'sended' : Send == true}" (ngModelChange)="setBorderColor()" formControlName="emailInput" required placeholder="Your email" type="email" #emailField name="email">
                 <img *ngIf=" contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched && contactForm.controls['emailInput'].hasError('pattern'))" src="../../assets/img/false.svg" alt="">
                 <span *ngIf=" contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched && contactForm.controls['emailInput'].hasError('pattern'))">Your email is required</span>
             </div>

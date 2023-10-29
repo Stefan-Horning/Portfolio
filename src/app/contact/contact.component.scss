@@ -248,6 +248,10 @@
         background-color: #ccc ;
         scale: 1 !important;
         cursor: default !important;
+
+        &:hover{
+            background-color: #ccc ;
+        }
     }
     margin-top: 10px;
     height: 50px;
@@ -306,4 +310,8 @@
 
 .redBorder{
     border-color: red !important;
+}
+
+.sended{
+    border-color: #9747FF !important;
 }

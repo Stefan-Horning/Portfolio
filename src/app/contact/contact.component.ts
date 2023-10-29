@@ -26,10 +26,10 @@ export class ContactComponent {
     massageInput: new FormControl('', [Validators.required, Validators.minLength(10)]),
     checkboxInput: new FormControl(false)
   });
+  Send:boolean = false;
   
 
   setBorderColor() {
-    console.log(this.contactForm.controls['emailInput'].hasError('pattern') )
     this.setVariable();
     if (this.contactForm.controls['emailInput'].hasError('pattern') ) {
       
@@ -61,9 +61,10 @@ export class ContactComponent {
           }
         )
         //this.setVariableFalse()
-        this.buttonField.nativeElement.innerText = 'Message is Send';
+        this.buttonField.nativeElement.innerText = 'Message was sent';
         this.buttonField.nativeElement.style.color = '#70E61C';
         this.buttonField.nativeElement.style.backgroundColor = '#9747FF';
+        this.Send = true;
       }else{ 
         //this.setVariableFalse()
         this.setValue()
