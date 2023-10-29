@@ -29,8 +29,10 @@ export class ContactComponent {
   
 
   setBorderColor() {
+    console.log(this.contactForm.controls['emailInput'].hasError('pattern') )
     this.setVariable();
     if (this.contactForm.controls['emailInput'].hasError('pattern') ) {
+      
       this.myEmail.nativeElement.style.bordercolor = '#ff0000';
     } else {
       this.myEmail.nativeElement.style.borderColor = '#70E61C';
