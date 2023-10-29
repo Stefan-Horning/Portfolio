@@ -17,15 +17,15 @@
         <span>Need a Frontend developer?</span>
         <p>Contact me!</p>
     </div>
-    <form (submit)="sendMail()" ngNativeValidate #myForm  [formGroup]="contactForm">
+    <form #form (submit)="sendMail()" ngNativeValidate #myForm  [formGroup]="contactForm">
         <div class="Contact">
             <div>
                 <input formControlName="nameInput" required minlength="2" placeholder="Your name" type="text" #nameField name="name">
-                <img *ngIf="contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)" src="../../assets/img/false.svg" alt="">
+                <img *ngIf=" contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)" src="../../assets/img/false.svg" alt="">
             </div>
             <div>
-                <input formControlName="emailInput" required placeholder="Your email" type="email" #emailField name="email">
-                <img *ngIf="contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched)" src="../../assets/img/false.svg" alt="">
+                <input (ngModelChange)="setBorderColor()" formControlName="emailInput" required placeholder="Your email" type="email" #emailField name="email">
+                <img *ngIf=" contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched && contactForm.controls['emailInput'].hasError('pattern'))" src="../../assets/img/false.svg" alt="">
             </div>
             <div>   
                 <textarea formControlName="massageInput" minlength="10" required #massageField placeholder="Your massage" name="massage"></textarea>

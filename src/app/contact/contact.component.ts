@@ -22,30 +22,57 @@ export class ContactComponent {
   buttonInput:boolean = true;
   contactForm = new FormGroup({
     nameInput: new FormControl('', [Validators.required, Validators.minLength(2)]),
-    emailInput: new FormControl('', [Validators.required, Validators.email]),
+    emailInput: new FormControl('', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.(de|com|net)$')]),
     massageInput: new FormControl('', [Validators.required, Validators.minLength(10)]),
     checkboxInput: new FormControl(false)
   });
+  
 
+  setBorderColor() {
+    this.setVariable();
+    if (this.contactForm.controls['emailInput'].hasError('pattern') ) {
+      this.myEmail.nativeElement.style.borderColor = 'red';
+    } else {
+      this.myEmail.nativeElement.style.borderColor = '#70E61C';
+
+      if(this.email.value == ""){
+        this.myEmail.nativeElement.style = '';
+      }
+      
+    }
+  }
 
   async sendMail(){
       this.setVariable();
       this.setVariableTrue();
 
-      let fd = new FormData();
-      fd.append('name',this.name.value);
-      fd.append('email',this.email.value);
-      fd.append('massage',this.massage.value);
-      //senden
-      await fetch('https://formspree.io/f/mdorbjdk',
-        {
-          method: 'POST',
-          body: fd,
-        }
-      )
-      this.setVariableFalse()
+      if(this.email.value.endsWith('.de') || this.email.value.endsWith('.com') || this.email.value.endsWith('.net')){
+        let fd = new FormData();
+        fd.append('name',this.name.value);
+        fd.append('email',this.email.value);
+        fd.append('massage',this.massage.value);
+        //senden
+        await fetch('https://formspree.io/f/mdorbjdk',
+          {
+            method: 'POST',
+            body: fd,
+          }
+        )
+        this.setVariableFalse()
+
+      }else{ 
+        alert('Bitte Richtige Email angeben')
+        this.setVariableFalse()
+        this.setValue()
+      }
     
-}
+  }
+
+  setValue(){
+    this.name.value = '';
+    this.email.value = '';
+    this.massage.value = '';
+  }
 
   setVariable(){
     this.name = this.myName.nativeElement;
