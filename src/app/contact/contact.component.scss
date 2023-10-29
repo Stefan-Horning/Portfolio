@@ -79,6 +79,12 @@
 .Contact{
     z-index: 10;
 
+    span{
+        color: red;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
     div{
         position: relative;
         overflow-x: hidden;
@@ -96,6 +102,10 @@
         }
     }
 
+    #myEmail{
+        border-color: #ff0000;
+    }
+
     input{
         gap: 10px;
         padding: 15px 25px 15px 25px;
@@ -106,7 +116,7 @@
         font-size: 14px;
         margin-bottom: 10px;
 
-
+        
         
         &::placeholder{
             color: white;
@@ -114,18 +124,30 @@
 
         &:focus-visible{
             box-shadow: none;
-            border: 1px solid #70E61C;
+            border: 1px solid #70E61C ;
             outline:#70E61C;
 
             &:invalid {
-                border-color: red;
+                border-color: red !important;
             }
 
             &:required:valid {
-                border-color: 70E61C;
+                border-color: #70E61C;
+            }
+        }
+
+        &:required:valid {
+            border-color: #70E61C;
+            &:invalid {
+                border-color: red !important;
             }
         }
     }
+
+    #myEmail{
+        border-color: #ff0000;
+    }
+
 
     textarea{
         gap: 10px;
@@ -140,6 +162,10 @@
         font-family: 'Poppins';
         max-width: 100%;
         resize: none;
+
+        &:required:valid {
+            border-color: #70E61C;
+        }
     
         &::placeholder{
             color: white;
@@ -151,11 +177,11 @@
             outline:#70E61C;
 
             &:invalid {
-                border-color: red;
+                border-color: red !important;
             }
 
             &:required:valid {
-                border-color: 70E61C;
+                border-color: #70E61C;
             }
         }
     }
@@ -219,7 +245,7 @@
 
 .submit-button{
     button[disabled] {
-        background-color: #ccc !important;
+        background-color: #ccc ;
         scale: 1 !important;
         cursor: default !important;
     }

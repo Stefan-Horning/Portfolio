@@ -31,7 +31,7 @@ export class ContactComponent {
   setBorderColor() {
     this.setVariable();
     if (this.contactForm.controls['emailInput'].hasError('pattern') ) {
-      this.myEmail.nativeElement.style.borderColor = 'red';
+      this.myEmail.nativeElement.style.bordercolor = '#ff0000';
     } else {
       this.myEmail.nativeElement.style.borderColor = '#70E61C';
 
@@ -58,11 +58,12 @@ export class ContactComponent {
             body: fd,
           }
         )
-        this.setVariableFalse()
-
+        //this.setVariableFalse()
+        this.buttonField.nativeElement.innerText = 'Message is Send';
+        this.buttonField.nativeElement.style.color = '#70E61C';
+        this.buttonField.nativeElement.style.backgroundColor = '#9747FF';
       }else{ 
-        alert('Bitte Richtige Email angeben')
-        this.setVariableFalse()
+        //this.setVariableFalse()
         this.setValue()
       }
     
