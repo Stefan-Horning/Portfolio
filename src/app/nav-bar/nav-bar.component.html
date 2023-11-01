@@ -9,7 +9,7 @@
             <a (click)="onToggle()" href="#contact-side">Contact</a>
         </div>
     </div>
-  </div>
+</div>
   
   
   <div class="main-container">
@@ -17,7 +17,16 @@
           <span class="name">Ste</span><p class="dot-color">f</p><span class="name">a</span><p class="half-color">n</p>
       </div>
       <div>
-          <a><button (click)="onToggle()">
+        <div *ngIf="screenWidth > 749">
+            <div class="nav-buttons">
+              <a href="#me-slide">About me</a>
+              <a href="#portfolio-side">Portfolio</a>
+              <a href="#contact-side">Contact</a>
+            </div>
+        </div>
+
+
+        <a *ngIf="screenWidth < 750"><button (click)="onToggle()">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  viewBox="0 0 512 512" style="overflow: visible; enable-background:new 0 0 512 512;" xml:space="preserve">
               <g>
@@ -31,7 +40,7 @@
               </svg>
             </button></a>
       </div>
-  </div>
+    </div>
 </div>
 
 

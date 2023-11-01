@@ -1,25 +1,46 @@
 
 .firstcreen-container{
     background-color: rgb(20, 29, 47);
+    
+    @media(min-width: 900px){
+        display: flex;
+        justify-content: center;
+
+    }
 }
 
 .picture-container{
+    max-height: 400px;
     background-color: rgb(20, 29, 47);
+
+    @media(min-width: 900px){
+        max-height: none;
+    }
 }
 
 .picture-backgroundColor{
+    max-height: 400px;
     img{
         width: 100%;
         height: 100%;
+    }
+    @media(min-width: 900px){
+        max-height: none;
     }
 }
 
 .wing{
     font-family: 'Poppins';
     position: relative;
+    height: 300px;
     img{
         max-width: 100vw;
         object-fit: contain;
+    }
+
+    @media(min-width: 900px){
+        min-height: 300px;
+        height: 400px;
     }
 }
 
@@ -29,6 +50,23 @@
         font-size: 28px;
         font-weight: 400;
         color: white;
+
+        @media(min-width: 400px){
+            font-size: 32px;
+        }
+        @media(min-width: 450px){
+            font-size: 34px;
+        }
+        @media(min-width: 500px){
+            font-size: 36px;
+        }
+
+        @media(min-width: 650px){
+            font-size: 38px;
+        }
+        @media(min-width: 900px){
+            font-size: 32px;
+        }
     }
 }
 
@@ -40,6 +78,15 @@
     left: 0;
     display: flex;
     align-items: center;
+
+    @media(min-width: 500px){
+        justify-content: center;
+    }
+
+    @media(min-width: 700px){
+        padding-top: 50px;
+    }
+
 }
 
 .name{
@@ -51,23 +98,55 @@
     font-size: 32px;
     font-weight: 700;
     color: white;
+
+    @media(min-width: 400px){
+        font-size: 36px;
+    }
+    @media(min-width: 450px){
+        font-size: 42px;
+    }
+    @media(min-width: 500px){
+        font-size: 46px;
+    }
+    @media(min-width: 650px){
+        font-size: 48px;
+    }
+    @media(min-width: 900px){
+        font-size: 36px;
+    }
 }
 
 .web-span{
     font-size: 22px;
     color: #9747FF;
     font-weight: 400;
+    @media(min-width: 450px){
+        font-size: 24px;
+    }
+    @media(min-width: 500px){
+        font-size: 28px;
+    }
+    @media(min-width: 650px){
+        font-size: 30px;
+    }
+    @media(min-width: 900px){
+        font-size: 24px;
+    }
 }
 
 .talk-container{
-    height: 100px;
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+
+    @media(min-width: 700px){
+        bottom: -30px;
+    }
 
     a{
         z-index: 10;
-        margin-top: -20px;
         padding: 15px 30px 15px 30px;
         text-decoration: none;
         background-color: #70E61C;
@@ -80,5 +159,90 @@
             scale: 1.2;
             background-color: #9747FF;
         }
+
     }
+}
+
+
+/*
+    <div class="firstcreen-container">
+    <div class="picture-container">
+        <div class="picture-backgroundColor">
+            <img src="./assets/img/photo-shadows.png" alt="">
+        </div>
+    </div>
+    <div class="wing">
+        <img *ngIf="screenWidth < 899" src="./assets/img/wing-mobile.svg" alt="">
+        <img *ngIf="screenWidth > 900" src="./.././../assets/img/destop.svg" alt="">
+        <div class="Headline">
+            <div class="vertical">
+                <span>I am</span>
+            </div>
+            <div class="name">
+                <span class="name-span">Stefan Horning</span>
+                <span class="web-span">FRONTEND DEVELOPER</span>
+            </div>
+        </div>
+        <div class="talk-container">
+            <a href="#contact-side">Let's talk!</a>
+        </div>
+    </div>
+</div>
+*/
+
+
+
+
+
+.destop-overcontainer{
+    background-color: #141d2f;
+    display: flex;
+    width: 100vw;
+}
+
+.destop-headline-overcontainer{
+    z-index: 9;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.destop-Headline{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.talk-container-destop{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    a{
+        z-index: 10;
+        padding: 15px 30px 15px 30px;
+        text-decoration: none;
+        background-color: #70E61C;
+        border-radius: 10px;
+        color: white;
+        gap: 10px;
+        transition: all 125ms ease-in-out;
+
+        &:hover{
+            scale: 1.2;
+            background-color: #9747FF;
+        }
+
+    }
+}   
+
+
+
+.wing-destop{
+    position: absolute;
+    object-fit: cover;
+    width: auto;
+    height: auto;
+    bottom: -20%;
 }

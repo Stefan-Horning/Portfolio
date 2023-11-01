@@ -5,6 +5,7 @@
     background-color: rgb(20, 29, 47);
     overflow-x: hidden;
     padding-bottom: 100px;
+    margin-top: -100px;
 }
 
 .backgraound-effect{
@@ -26,6 +27,8 @@ h1{
 }
 
 .sozial-media{
+    background-color: transparent !important;
+    padding-top: 40px;
     z-index: 1;
     position: relative;
     display: flex;
@@ -33,9 +36,15 @@ h1{
     width: 100%;
     height: 100px;
     margin-top: -20px;
+
+
+    @media(min-width: 700px){
+        padding-top: 60px;
+    }
 }
 
 .sozial-media-icons{
+
     transition: all 125ms ease-in-out;
     width: 100%;
     display: flex;
@@ -43,14 +52,15 @@ h1{
     align-items: center;
 
     a{
+        display: flex;
+        justify-content: flex-start;
+
         margin-left: 10px;
         margin-right: 10px;
         height: 30px;
         width: 30px;
     }
     img{
-        margin-left: 10px;
-        margin-right: 10px;
 
         &:hover{
             scale: 1.2;

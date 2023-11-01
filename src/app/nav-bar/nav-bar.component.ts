@@ -1,4 +1,4 @@
-import { Component, Input, } from '@angular/core';
+import { Component, HostListener, Input, } from '@angular/core';
 import { trigger, transition, animate, style } from '@angular/animations';
 import { HomescreenComponent } from '../homescreen/homescreen.component';
 import { AppRoutingModule } from '../app-routing.module';
@@ -15,6 +15,7 @@ export class NavBarComponent {
   activeImageIndex: number = 0;
   imageAnimationInterval: any;
   endpicture: any = false;
+  screenWidth:number;
 
   checkMenuMobile(){
     if(!this.isMenuOpen){
@@ -67,4 +68,18 @@ export class NavBarComponent {
     }
   }
 
+
+
+  
+
+  constructor() {
+    this.screenWidth = window.innerWidth;
+    this.getScreenSize();
+  }
+
+  @HostListener('window:resize', [])
+  getScreenSize() {
+      this.screenWidth = window.innerWidth;
+  }
 }
+
