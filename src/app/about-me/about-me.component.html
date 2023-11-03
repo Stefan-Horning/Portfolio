@@ -10,24 +10,33 @@
     </div>
     <h1>About me</h1>
     <div class="about-me-text-container">
-        <span>
-            At the age of 14, I discovered my passion for the world of software development, and thanks to my unwavering ambition, I successfully completed the adult education program in software development at the Developer Academy by the age of 16.
-            To continuously enhance my programming skills, I am always on the lookout for interesting projects and opportunities in the job market
-        </span>
-        <div class="personal-think" data-aos="zoom-in" data-aos-offset="300">
-            <div>   
-                <img src="../../assets/img/lamp.svg" alt="">
+        <div class="text-container">
+            <span>
+                At the age of 14, I discovered my passion for the world of software development, and thanks to my unwavering ambition, I successfully completed the adult education program in software development at the Developer Academy by the age of 16.
+                To continuously enhance my programming skills, I am always on the lookout for interesting projects and opportunities in the job market.
+            </span>
+            <div class="personal-think" data-aos="zoom-in" data-aos-offset="300">
+                <div>   
+                    <img src="../../assets/img/lamp.svg" alt="">
+                </div>
+                <div class="personal-span">
+                    <span >During my education, I approached projects with dedication and demonstrated my teamwork skills in various group projects.</span>
+                </div>
             </div>
-            <div class="personal-span">
-                <span >During my education, I approached projects with dedication and demonstrated my teamwork skills in various group projects.</span>
+            <div class="personal-think" data-aos="zoom-in" data-aos-offset="300">
+                <div>   
+                    <img src="../../assets/img/puzzle.svg" alt="">
+                </div>
+                <div class="personal-span">
+                    <span>My goal is to study computer science in the future. Currently, I am completing my Abitur education with a major in mathematics and a focus on computer science.</span>
+                </div>
             </div>
         </div>
-        <div class="personal-think" data-aos="zoom-in" data-aos-offset="300">
-            <div>   
-                <img src="../../assets/img/puzzle.svg" alt="">
+        <div *ngIf="screenWidth > 1100" class="pictute-container">
+            <div *ngIf="screenWidth > 1100" class="circle">
             </div>
-            <div class="personal-span">
-                <span>My goal is to study computer science in the future. Currently, I am completing my Abitur education with a major in mathematics and a focus on computer science.</span>
+            <div *ngIf="screenWidth > 1100" class="line-picture">
+
             </div>
         </div>
     </div>
