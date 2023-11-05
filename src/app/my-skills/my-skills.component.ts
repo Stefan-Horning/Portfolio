@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-my-skills',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-skills.component.scss']
 })
 export class MySkillsComponent {
+  screenWidth:number;
+  constructor() {
+    this.screenWidth = window.innerWidth;
+    this.getScreenSize();
+  }
 
+  @HostListener('window:resize', [])
+  getScreenSize() {
+      this.screenWidth = window.innerWidth;
+  }
 }

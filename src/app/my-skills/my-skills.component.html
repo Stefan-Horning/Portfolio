@@ -8,6 +8,9 @@
             <div class="explain-skill">
                 <span>I have gained experience in building projects with various front end technologies and concepts.</span>
             </div>
+            <div *ngIf="screenWidth > 900" class="talk-container">
+                <a href="#portfolio-side">Get in touch</a>
+            </div>
         </div>
         <div>
             <div class="skills-list">
@@ -53,7 +56,7 @@
                 </div>
                
             </div>
-            <div class="talk-container">
+            <div *ngIf="screenWidth < 899" class="talk-container">
                 <a href="#portfolio-side">Get in touch</a>
             </div>
         </div>

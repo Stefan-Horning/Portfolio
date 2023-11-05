@@ -19,11 +19,33 @@
     justify-content: flex-end;
     align-items: center;
 
+    @media (min-width:900px) {
+        justify-content: space-between;
+    }
+
+    @media (min-width:1200px) {
+        justify-content: flex-end;
+    }
+
     h1{
         font-size: 45px;
         font-weight: 700;
         color: white;
         margin-right: 10px;
+
+        @media (min-width:900px) {
+            margin-left: 30px;
+            font-size: 55px;
+        }
+
+        @media (min-width:1200px) {
+            font-size: 65px;
+        }
+
+        @media (min-width:1400px) {
+            font-size: 70px;
+            margin-right: 70px;
+        }
     }
 
     .line{
@@ -32,12 +54,17 @@
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
         background-color: #9747FF;
+
+        @media (min-width:900px) {
+            width: 30px;
+        }
     }
 }
 
 .explain-skill{
     display: flex;
     justify-content: flex-end;
+    max-width: 800px;
 
     span{
         font-size: 16px;
@@ -45,6 +72,21 @@
         text-align: end;
         color: white;
         margin-right: calc(10px + 20px);
+
+        @media (min-width:900px) {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        @media (min-width: 1200px) {
+            text-align: end;
+            font-size: 16px;
+        }
+
+        @media (min-width: 1400px) {
+            text-align: end;
+            font-size: 18px;
+        }
 
     }
 }
