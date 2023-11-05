@@ -388,12 +388,13 @@
 
 .Mebig {
     top: -20px;
-    left: 50px;
+    left: 20px;
     position: absolute;
     object-fit: contain;
     height: 100%  !important;
     object-position: top;
     z-index: 1 !important; /* Geändert von 2 auf 1 */
+
 }
 
 .background-i{
