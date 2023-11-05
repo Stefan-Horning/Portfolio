@@ -103,14 +103,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-
-    @media (max-width:900px) {
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-    }
     
 
     span{
