@@ -36,8 +36,11 @@
 </div>
 <div *ngIf="screenWidth < 900" class="firstcreen-container">
     <div class="picture-container">
+        <img *ngIf="screenWidth < 900" class="MebigMo" src="../../assets/img/MeBig.png" alt="">
         <div class="picture-backgroundColor">
+
             <img src="./assets/img/photo-shadows.png" alt="">
+
         </div>
     </div>
     <div class="wing">
@@ -56,4 +59,8 @@
             <a href="#contact-side">Let's talk!</a>
         </div>
     </div>
+</div>
+
+<div *ngIf="screenWidth > 900" class="scrollDownContainer">
+    Scroll down <img src="../../assets/img/arrow-down.svg" alt="">
 </div>
