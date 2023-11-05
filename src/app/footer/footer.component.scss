@@ -3,6 +3,13 @@
     z-index: 20;
     border-top: 4px solid #70E61C;
     background-color: rgb(20, 29, 47);
+    min-height: 250px;
+
+    @media (min-width:900px) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
 
 .name-container{
@@ -13,6 +20,7 @@
 }
 
 .name{
+    margin-top: 0;
     font-size: 56px;
     color: white;
 }
@@ -75,6 +83,11 @@
 
         &:hover{
             scale: 1.1;
+            color: #98fe00;
+        }
+
+        @media (min-width:900px) {
+            font-size: 18px;
         }
     }
 }

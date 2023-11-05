@@ -1,16 +1,27 @@
 <div class="footer">
-    <div class="name-container">
-        <span class="name">Ste</span><p class="dot-color">f</p><span class="name">a</span><p class="half-color">n</p>
+    <div>
+        <div class="name-container">
+            <span class="name">Ste</span><p class="dot-color">f</p><span class="name">a</span><p class="half-color">n</p>
+        </div>
+        <div class="copyright">
+            <span>© Stefan Horning 2023</span>
+        </div>
     </div>
-    <div class="copyright">
-        <span>© Stefan Horning 2023</span>
+    <div>
+        <div *ngIf="screenWidth < 899" class="sozial-media">
+            <a href="https://github.com/Stefan-Horning"><img src="../../assets/img/github-child.svg" alt=""></a>
+            <a href="mailto:stefanhorning@icloud.com"><img src="../../assets/img/email-child.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/stefan-horning-5a3294296/"><img src="../../assets/img/linkedin-child.svg" alt=""></a>
+        </div>
+
+        <div *ngIf="screenWidth > 900" class="sozial-media">
+            <a href="https://github.com/Stefan-Horning"><img src="../../assets/img/github.svg" alt=""></a>
+            <a href="mailto:stefanhorning@icloud.com"><img src="../../assets/img/email.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/stefan-horning-5a3294296/"><img src="../../assets/img/LinkInG.svg" alt=""></a>
+        </div>
+        <div class="Impressum">
+            <a href="#">Imprint</a>
+        </div>
     </div>
-    <div class="sozial-media">
-        <a href="https://github.com/Stefan-Horning"><img src="../../assets/img/github-child.svg" alt=""></a>
-        <a href="mailto:stefanhorning@icloud.com"><img src="../../assets/img/email-child.svg" alt=""></a>
-        <a href="https://www.linkedin.com/in/stefan-horning-5a3294296/"><img src="../../assets/img/linkedin-child.svg" alt=""></a>
-    </div>
-    <div class="Impressum">
-        <a href="#">Imprint</a>
-    </div>
+    
 </div>
