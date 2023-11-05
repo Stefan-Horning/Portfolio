@@ -1,5 +1,5 @@
 
-<div class="destop-overcontainer">
+<div *ngIf="screenWidth > 899" class="destop-overcontainer">
         <div>
             <div class="picture-backgroundColor">
                 <img src="./assets/img/photo-shadows.png" alt="">
@@ -27,4 +27,29 @@
                 <a href="https://www.linkedin.com/in/stefan-horning-5a3294296/"><img src="../../assets/img/LinkInG.svg" alt=""></a>    
             </div>
         </div>
+</div>
+
+
+<div *ngIf="screenWidth < 900" class="firstcreen-container">
+    <div class="picture-container">
+        <div class="picture-backgroundColor">
+            <img src="./assets/img/photo-shadows.png" alt="">
+        </div>
+    </div>
+    <div class="wing">
+        <img *ngIf="screenWidth < 899" src="./assets/img/wing-mobile.svg" alt="">
+        <img *ngIf="screenWidth > 900" src="./.././../assets/img/destop.svg" alt="">
+        <div class="Headline">
+            <div class="vertical">
+                <span>I am</span>
+            </div>
+            <div class="name">
+                <span class="name-span">Stefan Horning</span>
+                <span class="web-span">FRONTEND DEVELOPER</span>
+            </div>
+        </div>
+        <div class="talk-container">
+            <a href="#contact-side">Let's talk!</a>
+        </div>
+    </div>
 </div>
