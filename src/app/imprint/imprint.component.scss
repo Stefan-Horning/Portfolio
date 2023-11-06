@@ -1,0 +1,38 @@
+.overdiv{
+    scroll-behavior: auto !important;
+    font-family: 'Poppins';
+    background-color: rgb(20, 29, 47);
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-align: center;
+    a{
+        color: white;
+    }
+
+    div{
+        max-width: 500px;
+    }
+}
+
+h1{
+    text-decoration: underline white;
+}
+
+.goback{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    height: 30px;
+    width: 30px;
+
+    &:hover{
+        cursor: pointer !important;
+    }
+}

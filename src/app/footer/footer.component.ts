@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { NavigationEnd, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class FooterComponent {
   screenWidth:number;
-  constructor() {
+  constructor(private router:Router) {
     this.screenWidth = window.innerWidth;
     this.getScreenSize();
   }
@@ -16,4 +17,5 @@ export class FooterComponent {
   getScreenSize() {
       this.screenWidth = window.innerWidth;
   }
+
 }
