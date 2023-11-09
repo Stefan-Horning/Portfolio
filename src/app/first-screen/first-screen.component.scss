@@ -458,10 +458,10 @@
 
 .MebigMo{
     position: absolute;
-    top: 4%;
-    left: 3%;
+    top: 5%;
+    left: 1.95%;
     object-fit: cover;
-    height: 60% !important;
+    height: 59% !important;
     z-index: 1;
 
     @media (min-width:500px) {
@@ -469,6 +469,21 @@
     }
 
     @media (min-width:620px) {
+        height: 65% !important;
+    }
+
+    @media (max-height: 760px) {
+        
+        top: 7%;
+    }
+
+    @media (max-height: 700px) {
+        top: 10%;
+        height: 65% !important;
+    }
+
+    @media (max-height: 600px) {
+        top: 14%;
         height: 65% !important;
     }
 }
