@@ -20,6 +20,8 @@
     flex-direction: column;
     padding-bottom: 50px;
 
+    min-height: 500px;
+
     img{
         max-height: 700px !important;
         max-width: 600px !important;
@@ -32,8 +34,8 @@
         max-height: 750px;
 
         @media (min-width:500px) {
-            width: 50%;
-            height: 50%;
+            width: 70%;
+            height: 70%;
         }
 
         @media (min-width:900px) {
@@ -62,7 +64,7 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 50px;
-
+    min-height: 500px;
 
 
     img{
@@ -76,9 +78,10 @@
         max-width: 750px;
         max-height: 750px;
 
+
         @media (min-width:500px) {
-            width: 50%;
-            height: 50%;
+            width: 70%;
+            height: 70%;
         }
 
         @media (min-width:900px) {
