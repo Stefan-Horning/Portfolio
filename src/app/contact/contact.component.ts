@@ -22,7 +22,7 @@ export class ContactComponent {
   buttonInput:boolean = true;
   contactForm = new FormGroup({
     nameInput: new FormControl('', [Validators.required, Validators.minLength(2)]),
-    emailInput: new FormControl('', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.(de|com|net)$')]),
+    emailInput: new FormControl('', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.(de|com|net|nl|org|uk|cn|au|dk|pl|cz|at|lu|ru)$')]),
     massageInput: new FormControl('', [Validators.required, Validators.minLength(10)]),
     checkboxInput: new FormControl(false)
   });
@@ -48,7 +48,7 @@ export class ContactComponent {
       this.setVariable();
       this.setVariableTrue();
 
-      if(this.email.value.endsWith('.de') || this.email.value.endsWith('.com') || this.email.value.endsWith('.net')){
+      if(this.email.value.endsWith('.de') || this.email.value.endsWith('.com') || this.email.value.endsWith('.net') || this.email.value.endsWith('.ru') || this.email.value.endsWith('.org') || this.email.value.endsWith('.uk') || this.email.value.endsWith('.cn') ||this.email.value.endsWith('.au') ||this.email.value.endsWith('.dk') ||this.email.value.endsWith('.pl') ||this.email.value.endsWith('.cz') ||this.email.value.endsWith('.at') ||this.email.value.endsWith('.lu') ||this.email.value.endsWith('.nl')){
         let fd = new FormData();
         fd.append('name',this.name.value);
         fd.append('email',this.email.value);
