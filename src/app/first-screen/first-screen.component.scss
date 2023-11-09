@@ -334,6 +334,10 @@
     @media(min-width: 700px){
         padding-top: 60px;
     }
+
+    @media(min-width: 1000px){
+            width: 50%;
+    }
 }
 
 .sozial-media-icons{
@@ -373,6 +377,18 @@
     width: 60px;
     height: 3px;
     background-color: #9747FF;
+
+    @media (min-width:1000px) {
+        width: 120px;
+    }
+
+    @media (min-width:1400px) {
+        width: 150px;
+    }
+
+    @media (min-width:1600px) {
+        width: 180px;
+    }
 }
 
 
