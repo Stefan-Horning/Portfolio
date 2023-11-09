@@ -486,4 +486,24 @@
         top: 14%;
         height: 65% !important;
     }
+
+    @media (min-width:360px ) {
+        height: 65% !important;
+        top: 11%;
+    }
+
+    @media (min-width:410px ) {
+        height: 67% !important;
+        top: 12%;
+    }
+
+    @media (min-width:650px ) {
+        height: 67% !important;
+        top: 14%;
+    }
+
+    @media (min-width:750px ) {
+        height: 70% !important;
+        top: 15%;
+    }
 }
