@@ -3,7 +3,7 @@
         <h1>Impressum</h1>
 
         <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
-        <p>Stefan Horning<br />
+        <p>Stefan Henry Horning<br />
         Auf der Kempener Platte 55<br />
         47804 Krefeld</p>
 
@@ -44,6 +44,15 @@
     
 </div>
 
-<img routerLink="" class="goback" [src]="image" (mouseover)="image='../../assets/img/greenBack.png'" (mouseout)="image='../../assets/img/goBack.png'">
 
+
+<svg class="goback" routerLink="" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <line x1="10" y1="10" x2="40" y2="40" stroke="white" stroke-width="4"/>
+    <line x1="40" y1="10" x2="10" y2="40" stroke="white" stroke-width="4"/>
+    <style>
+        svg:hover line {
+            stroke: #70E61C;
+        }
+    </style>
+</svg>
 

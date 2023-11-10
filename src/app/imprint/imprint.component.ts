@@ -9,8 +9,6 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 export class ImprintComponent {
   constructor(private router: Router){}
 
-  image = '../../assets/img/goBack.png';
-
   ngOnInit() {
     this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {

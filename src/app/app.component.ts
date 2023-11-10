@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import * as AOS from 'aos';
 //import 'aos/dist/aos.css';
 
@@ -20,5 +21,9 @@ export class AppComponent implements OnInit{
     setTimeout(() =>{
       AOS.refresh();
     },500);
+  }
+
+  constructor(public translate: TranslateService) {
+     
   }
 }
