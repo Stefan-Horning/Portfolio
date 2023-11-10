@@ -3,10 +3,10 @@
   <div *ngIf="isMenuOpen == true" class="mobile-menu">
     <div class="menu-container">
         <div>
-            <a (click)="onToggle()" href="#me-slide">About me</a>
-            <a (click)="onToggle()" href="#slills-slide">My skills</a>
+            <a (click)="onToggle()" href="#me-slide"> {{'navAbout' | translate}}</a>
+            <a (click)="onToggle()" href="#slills-slide"> {{'navSkills' | translate}}</a>
             <a (click)="onToggle()" href="#portfolio-side">Portfolio</a>
-            <a (click)="onToggle()" href="#contact-side">Contact</a>
+            <a (click)="onToggle()" href="#contact-side">{{ 'navContact' | translate }}</a>
 
         </div>
     </div>
@@ -20,9 +20,9 @@
       <div>
         <div *ngIf="screenWidth > 749">
             <div class="nav-buttons">
-              <a href="#me-slide">About me</a>
+              <a href="#me-slide">{{'navAbout' | translate}}</a>
               <a href="#portfolio-side">Portfolio</a>
-              <a href="#contact-side">Contact</a>
+              <a href="#contact-side">{{ 'navContact' | translate }}</a>
               <a (click)="translate.use('de');"> DE</a>
             </div>
         </div>

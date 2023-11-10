@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {HttpClient} from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NgxTranslateCutModule } from 'ngx-translate-cut';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -41,6 +42,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxTranslateCutModule,
     HttpClientModule,
     TranslateModule.forRoot({
       defaultLanguage: 'en',
