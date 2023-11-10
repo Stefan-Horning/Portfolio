@@ -4,6 +4,7 @@ import { HomescreenComponent } from '../homescreen/homescreen.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
 import gsap from 'gsap';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -72,7 +73,7 @@ export class NavBarComponent {
 
   
 
-  constructor() {
+  constructor(public translate: TranslateService) {
     this.screenWidth = window.innerWidth;
     this.getScreenSize();
   }
