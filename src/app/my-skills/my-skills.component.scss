@@ -208,6 +208,7 @@
 
 
 .headline-portfolio{
+    position: relative;
     height: 100px;
     display: flex;
     justify-content: flex-end;
@@ -218,6 +219,11 @@
     }
 
     span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
         margin-left: 5px;
         margin-right: 5px;
         font-size: 45px;
@@ -252,15 +258,25 @@
     height: 3px;
     background-color: #9747FF;
 
+    max-width: 20%;
+
+    @media (min-width:329px) {
+        width: 40px;
+        max-width: 20%;
+    }
+
     @media (min-width:700px) {
         width: 220px;
+        max-width: 20%;
     }
 
     @media (min-width:950px) {
         width: 350px;
+        max-width: 20%;
     }
 
     @media (min-width:1000px) {
+        max-width: 25%;
         width: 450px;
     }
 
@@ -270,6 +286,7 @@
 
     @media (min-width:1300px) {
         width: 650px;
+        max-width: 30%;
     }
 
     @media (min-width:1700px) {
@@ -291,10 +308,6 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
-
-    @media (min-width:500px) {
-        justify-content: flex-end;
-    }
 
     @media (min-width:950px) {
         justify-content: center;
