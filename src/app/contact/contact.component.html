@@ -3,37 +3,37 @@
     <div class="destop-width">
         <div  class="headline">
             <div class="line"></div>
-            <h1>Contact</h1>
+            <h1> {{'TitleContact' | translate}}</h1>
         </div>
         <div class="sub-headline" data-aos="fade-down" data-aos-duration="1800" data-aos-offset="200">
-            <span>Got a problem to solve?</span>
+            <span> {{'unterTitleContact' | translate}}</span>
         </div>
         <div class="text" data-aos="fade-down" data-aos-duration="1800" data-aos-offset="200">
             <span>
-                Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.
+                {{'contentContact' | translate}}
             </span>
            
         </div>
         <div data-aos="fade-up" data-aos-duration="1800" data-aos-offset="200" class="slogen">
-            <span>Need a Frontend developer?</span>
-            <p>Contact me!</p>
+            <span>{{'needContact' | translate}}</span>
+            <p>{{'Contact-me!' | translate}}</p>
         </div>
     </div>
     
     <form #form (submit)="sendMail()" ngNativeValidate #myForm  [formGroup]="contactForm">
         <div class="Contact">
             <div>
-                <input formControlName="nameInput" required minlength="2" placeholder="Your name" type="text" #nameField name="name">
+                <input formControlName="nameInput" required minlength="2" placeholder="{{'Your-name' | translate}}" type="text" #nameField name="name">
                 <img *ngIf=" contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)" src="../../assets/img/false.svg" alt="">
                 <span *ngIf=" contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)">Your name is required</span>
             </div>
             <div>
-                <input [ngClass]="{'redBorder': contactForm.controls['emailInput'].hasError('pattern'), 'sended' : Send == true}" (ngModelChange)="setBorderColor()" formControlName="emailInput" required placeholder="Your email" type="email" #emailField name="email">
+                <input [ngClass]="{'redBorder': contactForm.controls['emailInput'].hasError('pattern'), 'sended' : Send == true}" (ngModelChange)="setBorderColor()" formControlName="emailInput" required placeholder="{{'Your-email' | translate}}" type="email" #emailField name="email">
                 <img *ngIf=" contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched && contactForm.controls['emailInput'].hasError('pattern'))" src="../../assets/img/false.svg" alt="">
                 <span *ngIf=" contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched && contactForm.controls['emailInput'].hasError('pattern'))">Your email is required</span>
             </div>
             <div>   
-                <textarea formControlName="massageInput" minlength="10" required #massageField placeholder="Your massage" name="massage"></textarea>
+                <textarea formControlName="massageInput" minlength="10" required #massageField placeholder="{{'Your-massage' | translate}}" name="massage"></textarea>
                 <img *ngIf="contactForm.controls['massageInput'].invalid && (contactForm.controls['massageInput'].dirty || contactForm.controls['massageInput'].touched)" src="../../assets/img/false.svg" alt="">
                 <span *ngIf="contactForm.controls['massageInput'].invalid && (contactForm.controls['massageInput'].dirty || contactForm.controls['massageInput'].touched)" >Your message is empty</span>
             </div>
@@ -43,13 +43,13 @@
                 <label for="AGB"><input formControlName="checkboxInput" name="checkbox" required id="AGB" type="checkbox"></label>
             </div>
             <div>
-                <span>I've read the</span>
-                <a routerLink="/imprint/" href="">privacy policy</a>
-                <span>and agree to the processing of my data as outlined.</span>
+                <span> {{'readContact' | translate}}</span>
+                <a routerLink="/imprint/" href=""> {{'policy' | translate}}</a>
+                <span> {{ 'agrreeContact' | translate }}</span>
             </div>
         </div>
         <div class="submit-button">
-            <button [disabled]="!contactForm.valid" #buttonField>Send message :)</button>
+            <button [disabled]="!contactForm.valid" #buttonField>{{ 'send'| translate}}</button>
         </div>
 
         <div class="top">

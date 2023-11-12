@@ -9,7 +9,7 @@
                 <span> {{'slills-text' | translate}}</span>
             </div>
             <div *ngIf="screenWidth > 900" class="talk-container">
-                <a href="#portfolio-side">Get in touch</a>
+                <a href="#portfolio-side">{{'touch' | translate}}</a>
             </div>
         </div>
         <div>
@@ -57,7 +57,7 @@
                
             </div>
             <div *ngIf="screenWidth < 899" class="talk-container">
-                <a href="#portfolio-side">Get in touch</a>
+                <a href="#portfolio-side">{{'touch' | translate}}</a> 
             </div>
         </div>
     </div>
@@ -68,7 +68,7 @@
         <div class="long-line"></div>
     </div>
     <div class="Portfolio-span">
-        <span>This page is a sample of my work - please feel free to try them out.</span>
+        <span>{{ 'PortfolioSpan' | translate }}</span>
     </div>
     <img style="display: none;" class="backgraound-effect" src="../../assets/img/skills-background.svg" alt="">
 </div>

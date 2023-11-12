@@ -153,15 +153,21 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     flex-direction: column;
     text-align: left;
     height: 100%;
 
     div{
         margin-top: -40px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     a{
+
         position: relative;
         padding: 16px;
         color: white;
@@ -229,4 +235,12 @@ button {
       }
   }
   }
+}
+
+.translate{
+  display: flex;
+  color: white;
+  align-items: center;
+
+
 }

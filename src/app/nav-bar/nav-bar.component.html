@@ -7,13 +7,14 @@
             <a (click)="onToggle()" href="#slills-slide"> {{'navSkills' | translate}}</a>
             <a (click)="onToggle()" href="#portfolio-side">Portfolio</a>
             <a (click)="onToggle()" href="#contact-side">{{ 'navContact' | translate }}</a>
-
+            <a (click)="translate.use('de');"> DE</a>
+            <a (click)="translate.use('en');"> EN</a>
         </div>
     </div>
 </div>
   
   
-  <div class="main-container">
+<div class="main-container">
       <div class="name-container">
           <span class="name">Ste</span><p class="dot-color">f</p><span class="name">a</span><p class="half-color">n</p>
       </div>
@@ -23,7 +24,10 @@
               <a href="#me-slide">{{'navAbout' | translate}}</a>
               <a href="#portfolio-side">Portfolio</a>
               <a href="#contact-side">{{ 'navContact' | translate }}</a>
-              <a (click)="translate.use('de');"> DE</a>
+              <div class="translate">
+                <a (click)="translate.use('de');"> DE</a> | <a (click)="translate.use('en');"> EN</a>
+              </div>
+              
             </div>
         </div>
 

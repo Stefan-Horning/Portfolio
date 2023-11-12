@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
@@ -28,7 +29,7 @@ export class ContactComponent {
   });
   Send:boolean = false;
   
-
+  constructor(public translate: TranslateService){}
   setBorderColor() {
     this.setVariable();
     if (this.contactForm.controls['emailInput'].hasError('pattern') ) {
@@ -61,7 +62,7 @@ export class ContactComponent {
           }
         )
         //this.setVariableFalse()
-        this.buttonField.nativeElement.innerText = 'Message was sent';
+        this.buttonField.nativeElement.innerText = this.translate.instant('sended');;
         this.buttonField.nativeElement.style.color = '#70E61C';
         this.buttonField.nativeElement.style.backgroundColor = '#9747FF';
         this.Send = true;
