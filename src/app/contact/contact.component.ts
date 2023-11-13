@@ -1,3 +1,4 @@
+import { ASTWithName } from '@angular/compiler';
 import { Component, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
@@ -55,14 +56,16 @@ export class ContactComponent {
         fd.append('email',this.email.value);
         fd.append('massage',this.massage.value);
         //senden
-        await fetch('https://formspree.io/f/mdorbjdk',
-          {
-            method: 'POST',
-            body: fd,
-          }
-        )
+        try {
+          await fetch('https://formspree.io/f/mdorbjdk', { 
+            method: 'POST', 
+            body: fd, 
+            mode: 'no-cors'
+          });
+        } catch (error) {
+        }
         //this.setVariableFalse()
-        this.buttonField.nativeElement.innerText = this.translate.instant('sended');;
+        this.buttonField.nativeElement.innerText = await this.translate.instant('sended');
         this.buttonField.nativeElement.style.color = '#70E61C';
         this.buttonField.nativeElement.style.backgroundColor = '#9747FF';
         this.Send = true;
