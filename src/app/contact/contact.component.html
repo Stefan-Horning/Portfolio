@@ -35,7 +35,7 @@
             <div>   
                 <textarea formControlName="massageInput" minlength="10" required #massageField placeholder="{{'Your-massage' | translate}}" name="massage"></textarea>
                 <img *ngIf="contactForm.controls['massageInput'].invalid && (contactForm.controls['massageInput'].dirty || contactForm.controls['massageInput'].touched)" src="../../assets/img/false.svg" alt="">
-                <span *ngIf="contactForm.controls['massageInput'].invalid && (contactForm.controls['massageInput'].dirty || contactForm.controls['massageInput'].touched)" >Your message is empty</span>
+                <span *ngIf="contactForm.controls['massageInput'].invalid && (contactForm.controls['massageInput'].dirty || contactForm.controls['massageInput'].touched)" >Your message is empty. Minlength 10</span>
             </div>
         </div>
         <div class="policy">

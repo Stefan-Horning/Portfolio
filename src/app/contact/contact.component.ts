@@ -69,6 +69,13 @@ export class ContactComponent {
         this.buttonField.nativeElement.style.color = '#70E61C';
         this.buttonField.nativeElement.style.backgroundColor = '#9747FF';
         this.Send = true;
+        setTimeout(() => {
+          this.setVariableFalse();
+          this.setValue();
+          this.buttonField.nativeElement.innerText = this.translate.instant('send');    
+          this.buttonField.nativeElement.style.color = '';
+          this.buttonField.nativeElement.style.backgroundColor = '';
+        },5000)
       }else{ 
         //this.setVariableFalse()
         this.setValue()
@@ -98,10 +105,11 @@ export class ContactComponent {
   }
 
   setVariableFalse(){
-      this.checkbox.checked = false;
+      this.checkbox.checked = true;
       this.name.disabled = false;
       this.email.disabled = false;
       this.massage.disabled = false;
+      this.button.disabled = true;
     
   }
 }
