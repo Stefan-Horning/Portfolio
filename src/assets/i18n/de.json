@@ -1,8 +1,8 @@
 {
     "About me" : "Über mich",
-    "intro" : "Mit 14 Jahren entdeckte ich meine Begeisterung für die Softwareentwicklung. Dank meiner starken Ambition konnte ich bereits mit 16 Jahren das Erwachsenenbildungsprogramm in Softwareentwicklung an der Developer Academy erfolgreich abschließen. Um meine Programmierfähigkeiten ständig zu verbessern, suche ich immer nach interessanten Projekten und Chancen auf dem Arbeitsmarkt.",
-    "firstAbout" : "Während meiner Ausbildung habe ich Projekte mit Hingabe angegangen und meine Teamfähigkeiten in verschiedenen Gruppenprojekten unter Beweis gestellt.",
-    "secoundAbout" :"Mein Ziel ist es, in der Zukunft Informatik zu studieren. Derzeit absolviere ich meine Abitur mit einem Schwerpunkt in Mathematik und einem Fokus auf Informatik.",
+    "intro" : "Im letzten Jahr habe ich meine Ausbildung als Junior Frontend Entwickler parallel zu meiner schulischen Ausbildung abgeschlossen. An der Developer Akademie habe ich professionelle Webanwendungen mit JavaScript & Angular entwickelt. Um meine Programmierkenntnisse kontinuierlich zu verbessern, suche ich stets nach interessanten Projekten und beruflichen Möglichkeiten auf dem Markt.",
+    "firstAbout" : "Ich habe lösungsorientierte Fähigkeiten als Frontend-Entwickler entwickelt, die es mir ermöglichen, innovative und intelligente Ideen zur Behebung von Fehlern und zum Start neuer Projekte zu entwickeln.",
+    "secoundAbout" :"In Team- und Einzelprojekten habe ich gelernt, wie man neue Projekte plant und organisiert. Zudem habe ich meine Kommunikationsfähigkeiten im Team verbessert, um erfolgreichere Projektergebnisse zu erzielen.",
     "navAbout" : "Über mich",
     "navSkills": "Kenntnisse",
     "navContact": "Kontakt",
@@ -26,5 +26,6 @@
     "send":"Sende Nachricht :)",
     "sended": "Zugestellt",
     "Imprint" : "Impressum",
-    "touch" : "Probier's aus"
+    "touch" : "Probier's aus",
+    "DABubble":"Die Task-Management-Webanwendung erleichtert die Zusammenarbeit mehrerer Benutzer, indem sie einfache Funktionen zum Erstellen, Zuweisen und Verfolgen von Aufgaben bietet."
 }

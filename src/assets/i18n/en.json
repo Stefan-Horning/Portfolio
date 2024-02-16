@@ -1,7 +1,7 @@
 {
-    "intro" : "At the age of 14, I discovered my passion for the world of software development, and thanks to my unwavering ambition, I successfully completed the adult education program in software development at the Developer Academy by the age of 16. To continuously enhance my programming skills, I am always on the lookout for interesting projects and opportunities in the job market.",
-    "firstAbout" : "During my education, I approached projects with dedication and demonstrated my teamwork skills in various group projects.",
-    "secoundAbout" : "My goal is to study computer science in the future. Currently, I am completing my Abitur education with a major in mathematics and a focus on computer science.",
+    "intro" : "Last year I completed my training as a junior frontend developer alongside my school education. At the Developer Akademie, I built professional web applications using JavaScript & Angular. To continuously improve my programming skills, I am always on the lookout for interesting projects and job opportunities in the market. ",
+    "firstAbout" : "I have developed solution-oriented skills as a frontend developer, which enable me to come up with innovative and intelligent ideas to fix bugs and start new projects.",
+    "secoundAbout" : "In team and solo projects, I learned how to plan and organize new projects. I also improved my communication skills in a team for more successful project results.",
     "navAbout": "About me",
     "navSkills": "My skills",
     "navContact": "Contact",
@@ -25,5 +25,6 @@
     "send":"Send message :)",
     "sended": "Message was sent",
     "Imprint" : "Imprint",
-    "touch" : "Get in touch"
+    "touch" : "Get in touch",
+    "DABubble":"The task management web application simplifies collaboration among multiple users, providing straightforward features for creating, assigning, and tracking tasks."
 }
