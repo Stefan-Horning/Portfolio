@@ -1,60 +1,63 @@
-<div id="contact-side" class="contact-container">
-    <img class="contact-background" src="../../assets/img/contact-background.svg" alt="">
-    <div class="destop-width">
-        <div  class="headline">
-            <div class="line"></div>
-            <h1> {{'TitleContact' | translate}}</h1>
+<div style="width: 100%; display: flex; justify-content: center;    position: relative;     background-color: rgb(20, 29, 47);">
+    <img style="z-index: 10;" class="contact-background" src="./assets/img/contact-background.svg" alt="">
+    <div id="contact-side" class="contact-container">
+        
+        <div class="destop-width">
+            <div  class="headline">
+                <div class="line"></div>
+                <h1> {{'TitleContact' | translate}}</h1>
+            </div>
+            <div class="sub-headline" data-aos="fade-down" data-aos-duration="1800" data-aos-offset="200">
+                <span> {{'unterTitleContact' | translate}}</span>
+            </div>
+            <div class="text" data-aos="fade-down" data-aos-duration="1800" data-aos-offset="200">
+                <span>
+                    {{'contentContact' | translate}}
+                </span>
+               
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1800" data-aos-offset="200" class="slogen">
+                <span>{{'needContact' | translate}}</span>
+                <p>{{'Contact-me!' | translate}}</p>
+            </div>
         </div>
-        <div class="sub-headline" data-aos="fade-down" data-aos-duration="1800" data-aos-offset="200">
-            <span> {{'unterTitleContact' | translate}}</span>
-        </div>
-        <div class="text" data-aos="fade-down" data-aos-duration="1800" data-aos-offset="200">
-            <span>
-                {{'contentContact' | translate}}
-            </span>
-           
-        </div>
-        <div data-aos="fade-up" data-aos-duration="1800" data-aos-offset="200" class="slogen">
-            <span>{{'needContact' | translate}}</span>
-            <p>{{'Contact-me!' | translate}}</p>
-        </div>
-    </div>
+        
+        <form #form (submit)="sendMail()" ngNativeValidate #myForm  [formGroup]="contactForm">
+            <div class="Contact">
+                <div>
+                    <input formControlName="nameInput" required minlength="2" placeholder="{{'Your-name' | translate}}" type="text" #nameField name="name">
+                    <img *ngIf=" contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)" src="assets/img/false.svg" alt="">
+                    <span *ngIf=" contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)">Your name is required</span>
+                </div>
+                <div>
+                    <input [ngClass]="{'redBorder': contactForm.controls['emailInput'].hasError('pattern'), 'sended' : Send == true}" (ngModelChange)="setBorderColor()" formControlName="emailInput" required placeholder="{{'Your-email' | translate}}" type="email" #emailField name="email">
+                    <img *ngIf=" contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched && contactForm.controls['emailInput'].hasError('pattern'))" src="assets/img/false.svg" alt="">
+                    <span *ngIf=" contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched && contactForm.controls['emailInput'].hasError('pattern'))">Your email is required</span>
+                </div>
+                <div>   
+                    <textarea formControlName="massageInput" minlength="10" required #massageField placeholder="{{'Your-massage' | translate}}" name="massage"></textarea>
+                    <img *ngIf="contactForm.controls['massageInput'].invalid && (contactForm.controls['massageInput'].dirty || contactForm.controls['massageInput'].touched)" src="assets/img/false.svg" alt="">
+                    <span *ngIf="contactForm.controls['massageInput'].invalid && (contactForm.controls['massageInput'].dirty || contactForm.controls['massageInput'].touched)" >Your message is empty. Minlength 10</span>
+                </div>
+            </div>
+            <div class="policy">
+                <div class="checkbox">
+                    <label for="AGB"><input formControlName="checkboxInput" name="checkbox" required id="AGB" type="checkbox"></label>
+                </div>
+                <div>
+                    <span> {{'readContact' | translate}}</span>
+                    <a routerLink="/imprint/" href=""> {{'policy' | translate}}</a>
+                    <span> {{ 'agrreeContact' | translate }}</span>
+                </div>
+            </div>
+            <div class="submit-button">
+                <button [disabled]="!contactForm.valid" #buttonField>{{ 'send'| translate}}</button>
+            </div>
     
-    <form #form (submit)="sendMail()" ngNativeValidate #myForm  [formGroup]="contactForm">
-        <div class="Contact">
-            <div>
-                <input formControlName="nameInput" required minlength="2" placeholder="{{'Your-name' | translate}}" type="text" #nameField name="name">
-                <img *ngIf=" contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)" src="../../assets/img/false.svg" alt="">
-                <span *ngIf=" contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)">Your name is required</span>
+            <div class="top">
+                <a href="#top"><img src="./assets/img/top.svg" alt=""></a>
             </div>
-            <div>
-                <input [ngClass]="{'redBorder': contactForm.controls['emailInput'].hasError('pattern'), 'sended' : Send == true}" (ngModelChange)="setBorderColor()" formControlName="emailInput" required placeholder="{{'Your-email' | translate}}" type="email" #emailField name="email">
-                <img *ngIf=" contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched && contactForm.controls['emailInput'].hasError('pattern'))" src="../../assets/img/false.svg" alt="">
-                <span *ngIf=" contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched && contactForm.controls['emailInput'].hasError('pattern'))">Your email is required</span>
-            </div>
-            <div>   
-                <textarea formControlName="massageInput" minlength="10" required #massageField placeholder="{{'Your-massage' | translate}}" name="massage"></textarea>
-                <img *ngIf="contactForm.controls['massageInput'].invalid && (contactForm.controls['massageInput'].dirty || contactForm.controls['massageInput'].touched)" src="../../assets/img/false.svg" alt="">
-                <span *ngIf="contactForm.controls['massageInput'].invalid && (contactForm.controls['massageInput'].dirty || contactForm.controls['massageInput'].touched)" >Your message is empty. Minlength 10</span>
-            </div>
-        </div>
-        <div class="policy">
-            <div class="checkbox">
-                <label for="AGB"><input formControlName="checkboxInput" name="checkbox" required id="AGB" type="checkbox"></label>
-            </div>
-            <div>
-                <span> {{'readContact' | translate}}</span>
-                <a routerLink="/imprint/" href=""> {{'policy' | translate}}</a>
-                <span> {{ 'agrreeContact' | translate }}</span>
-            </div>
-        </div>
-        <div class="submit-button">
-            <button [disabled]="!contactForm.valid" #buttonField>{{ 'send'| translate}}</button>
-        </div>
-
-        <div class="top">
-            <a href="#"><img src="../../assets/img/top.svg" alt=""></a>
-        </div>
-    </form>
-
+        </form>
+    
+    </div>
 </div>

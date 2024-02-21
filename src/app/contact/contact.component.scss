@@ -10,6 +10,8 @@
         justify-content: space-between;
         padding-top: 80px;
     }
+
+    max-width: 2000px;
 }
 
 .destop-width{
@@ -38,6 +40,12 @@
         @media (min-width:900px) {
             font-size: 55px;
         }
+
+        @media (min-width:1800px) {
+            margin-left: 40px;
+            font-size: 70px;
+        }
+
     }
 }
 
@@ -48,6 +56,10 @@
     height: 3px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+
+    @media (min-width:2000px) {
+        display: none;
+    }
 }
 
 .sub-headline{
@@ -56,6 +68,10 @@
         color: white;
         font-size: 23px;
         font-weight: 700;
+
+        @media (min-width:1800px) {
+            font-size: 36px;
+        }
     }
 
     @media (min-width:1000px) {
@@ -71,11 +87,26 @@
         color: white;
         font-size: 14px;
         font-weight: 400;
+
+        @media (min-width:1800px) {
+            margin-left: 0px !important;
+            
+        }
+
+        @media (min-width:1800px) {
+            font-size: 22px;
+        }
     }
 
     @media (min-width:1000px) {
         span{
             font-size: 16px;
+        }
+    }
+
+    @media (min-width:1800px) {
+        span{
+            font-size: 22px;
         }
     }
 }
@@ -94,12 +125,20 @@
         font-size: 13px;
         font-weight: 400;
         margin-right: 2px;
+
+        @media (min-width:1800px) {
+                font-size: 22px;
+        }
     }
 
     p{
         color: white;
         font-size: 14px;
         font-weight: 700;
+
+        @media (min-width:1800px) {
+            font-size: 22px;
+    }
     }
 
     @media (min-width:1000px) {
@@ -109,6 +148,16 @@
 
         span{
             font-size: 15px;
+        }
+    }
+
+    @media (min-width:1800px) {
+        p{
+            font-size: 22px;
+        }
+
+        span{
+            font-size: 22px;
         }
     }
 }
@@ -129,6 +178,12 @@
         color: red;
         font-size: 12px;
         margin-bottom: 10px;
+
+        @media (min-width:1800px) {
+            span{
+                font-size: 22px;
+            }
+        }
     }
 
     div{
@@ -287,6 +342,10 @@
         @media (min-width:900px) {
             font-size: 14px;
         }
+
+        @media (min-width:1800px) {
+            font-size: 16px;
+        }
     }
 
     a{
@@ -295,6 +354,9 @@
         font-size: 14px;
         color: #9747FF;
         text-decoration: none;
+        @media (min-width:1800px) {
+            font-size: 16px;
+        }
     }
 
     @media (min-width:900px) {
@@ -310,10 +372,26 @@
     margin-right: 10px;
     z-index: 10;
 
-    input{
-        cursor: pointer;
-        width: 15px;
-        height: 15px;
+
+
+    label{
+        width: 15px ;
+        height: 15px ;
+        @media (min-width:1800px) {
+            width:20px;
+            height: 20px;
+        }
+
+        input{
+            cursor: pointer;
+            width: 15px;
+            height: 15px ;
+    
+            @media (min-width:1800px) {
+                width:20px;
+                height: 20px;
+            }
+        }
     }
 }
 
@@ -324,16 +402,12 @@
     background-image: url('../../assets/img/uncheck.svg');
     background-size: cover;
     display: block;
-    width: 15px;
-    height: 15px;
 }
 
 .checkbox input:checked:before {
     content: '';
     background-image: url('../../assets/img/check_box.svg');
     background-size: cover;
-    width: 15px;
-    height: 15px;
     border: 0px solid #70E61C;
 }
 

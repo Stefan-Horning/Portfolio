@@ -10,7 +10,7 @@
                 </div>
     
             </div>
-            <div class="destop-headline-overcontainer">
+            <div class="destop-headline-overcontainer" #top>
                 <div class="destop-Headline">
                     <div class="vertical">
                         <span>I am</span>
@@ -49,7 +49,7 @@
     <div class="wing">
         <img *ngIf="screenWidth < 899" src="./assets/img/wing-mobile.svg" alt="">
         <img *ngIf="screenWidth > 900" src="./assets/img/destop.svg" alt="">
-        <div class="Headline">
+        <div class="Headline" #top>
             <div class="vertical">
                 <span>I am</span>
             </div>

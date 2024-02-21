@@ -1,67 +1,73 @@
-<div id="slills-slide" class="my-skills-container">
-    <div class="destop-view">
-        <div>
-            <div class="headline">
-                <h1> {{'skills' | translate}}</h1>
-                <div class="line"></div>
+<div style="background-color: rgb(20, 29, 47); width: 100%; display: flex; justify-content: center;">
+    <div id="slills-slide" class="my-skills-container">
+        <div class="destop-view">
+            <div>
+                <div class="headline">
+                    <h1> {{'skills' | translate}}</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="explain-skill">
+                    <span> {{'slills-text' | translate}}</span>
+                </div>
+                <div *ngIf="screenWidth > 900" class="talk-container">
+                    <a href="#portfolio-side">{{'touch' | translate}}</a>
+                </div>
             </div>
-            <div class="explain-skill">
-                <span> {{'slills-text' | translate}}</span>
-            </div>
-            <div *ngIf="screenWidth > 900" class="talk-container">
-                <a href="#portfolio-side">{{'touch' | translate}}</a>
+            <div>
+                <div class="skills-list">
+                    <div data-aos="zoom-in-up" data-aos-offset="300">
+                        <img src="./assets/img/skill1.svg" alt="">
+                        <span>Angular</span>
+                    </div>
+                    <div data-aos="zoom-in-up" data-aos-offset="300">
+                        <img src="./assets/img/skill2.svg" alt="">
+                        <span>TypeScript</span>
+                    </div>
+                    <div data-aos="zoom-in-up" data-aos-offset="300">
+                        <img src="./assets/img/skill3.svg" alt="">
+                        <span>JavaScript</span>
+                    </div>
+                    <div data-aos="zoom-in-up" data-aos-offset="300">
+                        <img src="./assets/img/skill4.svg" alt="">
+                        <span>HTML</span>
+                    </div>
+                    <div data-aos="zoom-in-up" data-aos-offset="300">
+                        <img src="./assets/img/skill5.svg" alt="">
+                        <span>Firebase</span>
+                    </div>
+                    <div data-aos="zoom-in-up" data-aos-offset="300">
+                        <img src="./assets/img/skill6.svg" alt="">
+                        <span>GIT</span>
+                    </div>
+                    <div data-aos="zoom-in-up" data-aos-offset="300">
+                        <img src="./assets/img/skill7.svg" alt="">
+                        <span>CSS</span>
+                    </div>
+                    <div data-aos="zoom-in-up" data-aos-offset="300">
+                        <img src="./assets/img/skill8.svg" alt="">
+                        <span>Material design</span>
+                    </div>
+                    <div data-aos="zoom-in-up" data-aos-offset="300">
+                        <img src="./assets/img/skill9.svg" alt="">
+                        <span>Rest-Api</span>
+                    </div>
+                    <div data-aos="zoom-in-up" data-aos-offset="300">
+                        <img src="./assets/img/skill10.svg" alt="">
+                        <span>Scrum</span>
+                    </div>
+                   
+                </div>
+                <div *ngIf="screenWidth < 899" class="talk-container">
+                    <a href="#portfolio-side">{{'touch' | translate}}</a> 
+                </div>
             </div>
         </div>
-        <div>
-            <div class="skills-list">
-                <div data-aos="zoom-in-up" data-aos-offset="300">
-                    <img src="./assets/img/skill1.svg" alt="">
-                    <span>Angular</span>
-                </div>
-                <div data-aos="zoom-in-up" data-aos-offset="300">
-                    <img src="./assets/img/skill2.svg" alt="">
-                    <span>Typescript</span>
-                </div>
-                <div data-aos="zoom-in-up" data-aos-offset="300">
-                    <img src="./assets/img/skill3.svg" alt="">
-                    <span>Javascript</span>
-                </div>
-                <div data-aos="zoom-in-up" data-aos-offset="300">
-                    <img src="./assets/img/skill4.svg" alt="">
-                    <span>HTML</span>
-                </div>
-                <div data-aos="zoom-in-up" data-aos-offset="300">
-                    <img src="./assets/img/skill5.svg" alt="">
-                    <span>Firebase</span>
-                </div>
-                <div data-aos="zoom-in-up" data-aos-offset="300">
-                    <img src="./assets/img/skill6.svg" alt="">
-                    <span>GIT</span>
-                </div>
-                <div data-aos="zoom-in-up" data-aos-offset="300">
-                    <img src="./assets/img/skill7.svg" alt="">
-                    <span>CSS</span>
-                </div>
-                <div data-aos="zoom-in-up" data-aos-offset="300">
-                    <img src="./assets/img/skill8.svg" alt="">
-                    <span>Material design</span>
-                </div>
-                <div data-aos="zoom-in-up" data-aos-offset="300">
-                    <img src="./assets/img/skill9.svg" alt="">
-                    <span>Rest-Api</span>
-                </div>
-                <div data-aos="zoom-in-up" data-aos-offset="300">
-                    <img src="./assets/img/skill10.svg" alt="">
-                    <span>Scrum</span>
-                </div>
-               
-            </div>
-            <div *ngIf="screenWidth < 899" class="talk-container">
-                <a href="#portfolio-side">{{'touch' | translate}}</a> 
-            </div>
-        </div>
+        
+        
     </div>
     
+</div>
+<div style="background-color: rgb(20, 29, 47);">
     <div id="portfolio-side" class="headline-portfolio">
         <div class="short-line"></div>
         <span>Portfolio</span>
@@ -72,3 +78,4 @@
     </div>
     <img style="display: none;" class="backgraound-effect" src="./assets/img/skills-background.svg" alt="">
 </div>
+
