@@ -261,7 +261,7 @@
         }
 
         @media (min-width:700px) {
-            font-size: 65px;
+            font-size: 70px;
         }
 
     }
@@ -276,6 +276,11 @@
 
     @media (min-width:700px) {
         width: 40px;
+    }
+
+    @media (min-width:2200px) {
+        display: none;
+        
     }
 }
 
@@ -318,6 +323,10 @@
     @media (min-width:1700px) {
         width: 750px;
     }
+    @media (min-width:2200px) {
+        display: none;
+        
+    }
 }
 
 .backgraound-effect{
@@ -350,6 +359,10 @@
             justify-content: flex-end;
             margin-left: 20px;
             margin-right: 20px;
+        }
+
+        @media (min-width:2000px) {
+            font-size: 22px;
         }
     }
 }

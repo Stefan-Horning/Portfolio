@@ -11,7 +11,7 @@
         padding-top: 80px;
     }
 
-    max-width: 2000px;
+    max-width: 2200px;
 }
 
 .destop-width{
@@ -237,6 +237,11 @@
             max-width: 400px;
             min-width: 80%;
         }
+
+
+        @media (min-width:2000px) {
+            font-size: 22px;
+        }
         
         &::placeholder{
             color: white;
@@ -283,6 +288,10 @@
         max-width: 100%;
         resize: none;
         width: 80%;
+
+        @media (min-width:2000px) {
+            font-size: 22px;
+        }
 
         @media (min-width:400px) {
             max-width: 400px;
@@ -416,6 +425,10 @@
         background-color: #ccc ;
         scale: 1 !important;
         cursor: default !important;
+
+        @media (min-width:2000px) {
+            font-size: 22px;
+        }
 
         &:hover{
             background-color: #ccc ;

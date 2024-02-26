@@ -108,6 +108,11 @@
     font-size: 32px;
     font-weight: 700;
     color: #9747FF;
+
+
+    @media (min-width:2000px) {
+        font-size: 36px;
+    }
 }
 
 .programming{
@@ -116,6 +121,11 @@
     font-size: 23px;
     font-weight: 400;
     color: #70E61C;
+
+
+    @media (min-width:2000px) {
+        font-size: 26px;
+    }
 }
 
 .description{
@@ -127,6 +137,11 @@
     text-align: center;
     font-size: 14px;
     font-weight: 400;
+
+
+    @media (min-width:2000px) {
+        font-size: 20px;
+    }
 }
 
 .buttons{
@@ -156,6 +171,11 @@
     transition: all 125ms ease-in-out;
     border: 2px solid #9747FF;
 
+
+    @media (min-width:2000px) {
+        font-size: 22px;
+    }
+
     &:hover{
         background-color: #70E61C;
         border: 2px solid #70E61C;
@@ -172,6 +192,9 @@
     transition: all 125ms ease-in-out;
     border: 2px solid #70E61C;
 
+    @media (min-width:2000px) {
+        font-size: 22px;
+    }
     &:hover{
         background-color: #70E61C;
     }

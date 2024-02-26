@@ -1,5 +1,5 @@
-
-<div *ngIf="screenWidth > 899" class="destop-overcontainer">
+<div style="width: 100%; background-color: rgb(20, 29, 47); display: flex; justify-content: center;">
+    <div *ngIf="screenWidth > 899" class="destop-overcontainer">
         <div class="background-i">
         </div>
         <div class="max-w">
@@ -26,7 +26,9 @@
             </div>
         </div>
         
-
+        <div *ngIf="screenWidth > 900" class="scrollDownContainer">
+            Scroll down<img src="./assets/img/arrow-down.svg" alt="">
+        </div>
 </div>
 
 <div *ngIf="screenWidth > 899" class="sozial-media">
@@ -64,6 +66,5 @@
     </div>
 </div>
 
-<div *ngIf="screenWidth > 900" class="scrollDownContainer">
-    Scroll down<img src="./assets/img/arrow-down.svg" alt="">
+
 </div>
