@@ -9,7 +9,7 @@
     "slills-text" : " I have gained experience in building projects with various front end technologies and concepts.",
     "talk" : "Let's talk!",
     "PortfolioSpan": "This page is a sample of my work - please feel free to try them out.",
-    "join" : "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "makeup" : "This is a live project that combines design and coding to create functional and visually appealing digital solutions. It’s an evolving effort, continuously refined through feedback and new ideas.",
     "Pollo" : "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and poison bottles to fight against the killer chicken.",
     "unterTitleContact" : "Got a problem to solve?",
     "TitleContact" : "Contact",
@@ -26,5 +26,6 @@
     "sended": "Message was sent",
     "Imprint" : "Imprint",
     "touch" : "Get in touch",
+    "osteomedica": "This is a live project focused on delivering cutting-edge digital experiences through an iterative process. We aim to blend creativity with functionality, ensuring the project adapts and improves over time.",
     "DABubble":"The task management web application simplifies collaboration among multiple users, providing straightforward features for creating, assigning, and tracking tasks."
 }
